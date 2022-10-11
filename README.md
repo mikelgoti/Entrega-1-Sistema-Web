@@ -18,7 +18,7 @@ https://github.com/mikelgoti/LAMPSTRUCTURE-USING-DOCKERCOMPOSE.git
 ```
 2. Abrir una terminal git en el directorio donde queramos que se descargue el proyecto. Por ejemplo, en el escritorio. Una vez abierta la terminal ejecutamos el siguiente comando:
 ```
-git clone https://github.com/mikelgoti/LAMPSTRUCTURE-USING-DOCKERCOMPOSE.git
+https://github.com/mikelgoti/Entrega-1-Sistema-Web.git
 ```
 3. Una vez se descargue el proyecto ubicamos una terminal donde se haya descargado y accedemos a el.
 ```
