@@ -1,0 +1,192 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Roboto', sans-serif;
+	background: #E5E5E5;
+    margin: 0;
+}
+
+main {
+	max-width: 800px;
+	width: 90%;
+	margin: auto;
+	padding: 40px;
+}
+
+header{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    height: 80px;
+    padding: 10px;
+    background-color: lightgreen;
+}
+
+.registro {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 20px;
+}
+
+.etiqueta {
+    /*text-align: center;*/
+	display: block;
+	font-weight: 700;
+	padding: 10px;
+	cursor: pointer;
+}
+
+.campo__grupo-input {
+	position: relative;
+}
+
+.campo__input {
+    text-align: center;
+	width: 100%;
+	background: #fff;
+	border: 3px solid transparent;
+	border-radius: 13px;
+	height: 45px;
+	line-height: 45px;
+	padding: 0 40px 0 10px;
+	transition: .3s ease all;
+}
+
+.campo__input:focus {
+	border: 3px solid #0075FF;
+	outline: none;
+	box-shadow: 3px 0px 30px rgba(163,163,163, 0.4);
+}
+
+.campo__input-error {
+	font-size: 12px;
+	margin-bottom: 0;
+	display: none;
+}
+
+.campo__icono-estado-x {
+	position: absolute;
+	right: 10px;
+	bottom: 15px;
+	z-index: 100;
+	font-size: 16px;
+    visibility: hidden;
+}
+
+.campo__icono-estado-check{
+    position: absolute;
+	right: 10px;
+	bottom: 15px;
+	z-index: 100;
+	font-size: 16px;
+    visibility: hidden;
+}
+
+.campo__mensaje {
+	height: 45px;
+	line-height: 45px;
+	background: #F66060;
+	padding: 0 15px;
+	border-radius: 3px;
+	display: none;
+}
+
+.campo__mensaje-activo {
+	display: block;
+}
+
+.campo__mensaje p {
+	margin: 0;
+}
+
+.campo__grupo-btn-enviar {
+	position: relative;
+}
+
+.campo__btn {
+	height: 55px;
+	line-height: 45px;
+	width: 100%;
+	background: #000;
+	color: #fff;
+	font-weight: bold;
+    font-size: 20px;
+	border: none;
+	border-radius: 13px;
+	cursor: pointer;
+	transition: .1s ease all;
+}
+
+.boton_desbloqueado .campo__btn {
+	box-shadow: 4px 5px 40px rgb(0, 255, 51);
+}
+
+.campo__mensaje-exito {
+	font-size: 14px;
+	color: #119200;
+	display: none;
+}
+/*nadsa*/
+.campo__mensaje-exito-activo {
+	display: block;
+}
+/*-------------------------------------------------s*/
+.grupo_registrar-mal .campo__icono-estado-x {
+    visibility: visible;
+	color: #bb2929;
+	opacity: 1;
+}
+
+.grupo_registrar-mal .campo__input {
+	border: 3px solid #bb2929;
+}
+
+.grupo_registrar-bien .campo__icono-estado-check {
+    visibility: visible;
+	color: #119200;
+	opacity: 1;
+}
+
+.grupo_registrar-bien .campo__input{
+    border: 3px solid #119200;
+}
+
+#link_volver{
+	text-align: center;
+	align-items: center;
+	text-decoration: none;
+	height: 55px;
+	line-height: 45px;
+	width: 100%;
+	background: #000;
+	color: #fff;
+	font-weight: bold;
+    font-size: 20px;
+	border: none;
+	border-radius: 13px;
+	cursor: pointer;
+	transition: .1s ease all;
+}
+
+#link_volver:hover {
+	box-shadow: 3px 0px 30px rgb(255, 0, 0);
+}
+
+
+/*REACTIVE*/
+@media screen and (max-width: 800px) {
+	.campo {
+		grid-template-columns: 1fr;
+	}
+
+	.campo__mensaje,
+	.campo__grupo-btn-enviar {
+		grid-column: 1;
+	}
+
+	.campo__btn {
+		width: 100%;
+	}
+}

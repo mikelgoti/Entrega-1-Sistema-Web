@@ -1,0 +1,62 @@
+body{
+    margin: 0;
+}
+
+header{
+    margin: 30px;
+}
+
+.header2{
+    display: flex;
+}
+
+.header2 .searchbar{
+    position: absolute;
+    right: 500px;
+    top: 0;
+    flex-direction: column;
+}
+
+#search{
+    width: 300px;
+    height: 30px;
+    border-radius: 10px;
+    border-style: solid;
+}
+
+.tabla{
+    width: 100%;
+    position: absolute;
+    /*margin-left: 16%;*/
+    margin-top: 20px;
+    
+}
+
+th,td{
+    border: solid 1.5px black;
+}
+
+#agregar{
+    display: flex;
+}
+
+.icono_link_descarga{
+    padding: 17px;
+}
+
+.btn_editar_borrar{
+    width: 100%;
+    height: 40px;
+    border-style: solid;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 2px;
+}
+
+#btn_editar{
+    background-color: rgb(0, 255, 0);
+}
+
+#btn_borrar{
+    background-color: red;
+}

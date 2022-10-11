@@ -1,0 +1,442 @@
+*{
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    background-color: lightgray;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+#TITULO_COMIC_CENTRAL{
+    margin: 30px;
+    font-family: 'Bangers', cursive;
+    font-size: 90px;
+    color: #0075FF;
+}
+
+.titulo{
+    display: flex;
+}
+
+#cerrar_sesion{
+    position: absolute;
+    right: 0;
+    top: 100px;
+}
+
+.menuSpan{
+    background: blue;
+    padding: 20px;
+    display: block;
+    color: white;
+    cursor: pointer;
+    font-size: large;
+    width: 100%;
+}
+
+.menu, .perfil{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu{
+    background: #0075FF;
+    width: 100%;
+    margin-left: -100%;
+    transition: all 0.5s;
+}
+
+.menu_link{
+    display: block;
+    padding: 20px;
+    color: white;
+    text-decoration: none;
+}
+
+.menu_link:hover{
+    background: black;
+}
+
+.perfil{
+    height: 0;
+    overflow: hidden;
+    transition: all 0.3s;
+}
+
+.perfil .menu__a{
+    background: #08B0F6;
+    padding: 10px;
+    padding-left: 10px;
+    width: 223px;
+    cursor: pointer;
+    font-family: 'Bangers', cursive;
+    font-style: bold;
+    font-size: 20px;
+}
+
+.perfil .menu__a i{
+    color: black;
+    color: none;
+}
+
+.menu__a:hover i{
+    text-shadow: 3px 0px 10px black;
+}
+
+#mas_info{
+    font-style: bolder;
+}
+
+#mas_info:hover{
+    text-decoration: underline 2px;
+}
+
+.perfil .php_info{
+    color: white;
+    font-size: medium;
+    margin-left: 20px;
+    font-family: 'Bangers', cursive;
+}
+
+.input_cambio{
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+
+.input_cambio input{
+    padding: 10px;
+    margin: 4px;
+    background-color: lightgray;
+    border: 3px solid transparent;
+    border-radius: 13px;
+    transition: .3s ease all;
+}
+
+.input_cambio input:focus {
+	border: 3px solid #0075FF;
+	outline: none;
+	box-shadow: 3px 0px 30px #0075FF;
+}
+
+.input_cambio .input_cambio_btn{
+    cursor: pointer;
+    width: 187px;
+    height: 20px;
+    background-color: black;
+    color: white;
+    border: 3px solid transparent;
+    padding: 0;
+    font-size: small;
+    font-style: bolder;
+    text-align: center;
+    transition: .3s ease all;
+}
+
+.input_cambio_btn:hover{
+    outline: none;
+    box-shadow: 3px 0px 30px black;
+    transition: .3s ease all;
+}
+
+.input_cambio_btn:focus{
+    color: white;
+}
+
+
+/*
+    PERFIL PERSONAL 
+*/
+.perfil{
+    position: absolute;
+    width: 200px;
+    overflow: visible;
+    z-index: 2;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.contenedor-perfil:hover .perfil{
+    opacity: 1;
+    visibility: visible;
+}
+
+.aparecer{
+    margin-left: 0;
+}
+
+@media(min-width:1000px){
+    .menuSpan{
+        display: none;
+    }
+
+    .menu{
+        margin-left: 0;
+        display: flex;
+    }
+
+    .contenedor-perfil{
+        position: relative;
+    }
+    .perfil{
+        position: absolute;
+        top: 60px;
+        width: 300px;
+        overflow: visible;
+        z-index: 1;
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .contenedor-perfil:hover .perfil{
+        opacity: 1;
+        visibility: visible;
+    }
+
+}
+
+/*---------------------------------------------------------------------*/
+.grupo_registrar-mal .campo__icono-estado-x {
+    visibility: visible;
+	color: #bb2929;
+	opacity: 1;
+}
+
+.grupo_registrar-mal .campo_input input{
+	border: 10px solid #bb2929;
+}
+
+.grupo_registrar-mal .etiqueta{
+    font-weight: bold;
+    color: #bb2929;
+}
+
+.grupo_registrar-bien .campo__icono-estado-check {
+    visibility: visible;
+	color: #119200;
+	opacity: 1;
+}
+
+.grupo_registrar-bien .campo__input{
+    border: 3px solid #119200;
+}
+
+.grupo_registrar-normal .campo__input:focus{
+    border: 3px solid #0075FF;
+	outline: none;
+	box-shadow: 3px 0px 30px rgba(163,163,163, 0.4);
+}
+/*---------------------------------------------------------------------*/
+
+
+/*
+    PASARELA DE IMAGENES 
+*/
+
+.contenedor_imagenes_comic{
+    display: flex;
+    width: 95%;
+    height: 350px;
+    padding: 20px;
+    margin: 40px 0px 0px 50px;
+    border-style: solid;
+    border-radius: 20px;
+    background-color: grey;
+}
+
+.slider-list{
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    height: 304px;
+    padding: 10px 0px;
+    margin: 0px auto;
+    max-width: 90vw;
+    overflow: hidden;
+}
+.slider-seguimiento{
+    position: relative;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    transition: .5s ease-in-out;
+}
+.slider{
+    position: relative;
+    width: 275px;
+    padding: 0 18px;
+    float: left;
+    box-sizing: border-box;
+    display: flex;
+    height: 100%;
+}
+
+.slider .descargar_btn{
+    position: absolute;
+    left: 19%;
+    bottom: 20px;
+    width: 140px;
+    height: 45px;
+    font-family: sans-serif;
+    font-style: bolder;
+    font-size: large;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+    cursor: pointer;
+    border-style: solid;
+    border-radius: 7px;
+}
+
+.slider picture:hover .descargar_btn{
+    background-color: rgb(33, 216, 128);
+    opacity: 1;
+    visibility: visible;
+}
+
+.slider a img{
+    object-fit: cover;
+    height: 300px;
+    width: 100%;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.5);
+    transition: .3s ease-in-out;
+}
+.slider a img:hover{
+    opacity: .85;
+}
+
+.slider-flecha{
+    border-radius: 30px;
+    background-color: #fff;
+    position: absolute;
+    z-index: 1;
+    width: 48px;
+    height: 48px;
+    text-align: center;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.15);
+    border: 0;
+    cursor: pointer;
+}
+.slider-flecha:focus{
+    outline: 0;
+}
+.slider-flecha svg{
+    width: 12px;
+    height: 100%;
+    color: rgba(0,0,0,.7);
+}
+.slider-siguiente{
+    left: 0px;
+}
+.slider-anterior{
+    right: 0px;
+}
+
+@media(max-width:1000px){
+
+    .contenedor_imagenes_comic{
+        margin-left: 0;
+        width: 100%;
+    }
+}
+
+
+/*
+    MUST READS LECTURAS OBLIGATORIAS
+*/
+
+.secondSection{
+    margin: 0;
+    display: flex;
+    margin-top: 40px;
+}
+
+.contenedor_must_reads{
+    height: 900px;
+    width: 1200px;
+    border: solid;
+    
+    background-image: linear-gradient(to left,lightgrey,grey);
+}
+
+.must_reads{
+    display: flex;
+    justify-content: space-between;
+}
+
+.must_reads img{
+    margin-right: 30px;
+}
+
+.texto{
+    margin-right: 25px;
+}
+
+.ligths{
+    height: 900px;
+    width: 100%;
+    border: solid;
+    background-image: linear-gradient(to right,lightgrey,grey);
+}
+
+/*PARA PONER EN COLUMA LECATURAS OBLIGAROTIAS Y SLIDER
+    CUANDO HAGA EL SLIDER EN LIGTHS IGUAL HAY QUE CAMBIAR EL MAX-WIDTH POR ALGO MAS
+*/
+@media(max-width:1000px){
+
+    .secondSection{
+        flex-direction: column;
+    }
+
+    .contenedor_must_reads{
+        width: 100%;
+    }
+
+    .ligths{
+        margin-top: 780px;
+    }
+}
+
+/*CONTENEDOR DE LA IMAGEN , TITULO Y EL PARRAFO*/
+@media(max-width:630px){
+    
+    .must_reads{
+        flex-direction: column;
+    }
+
+    .must_reads div:first-child{
+        order: 1;
+    }
+}
+
+/*SECTION DC*/
+.contenedor_dc{
+    margin: 0;
+}
+
+.contenedor_dc .dc_header{
+    height: 240px;
+    border-style: solid;
+    background-image: linear-gradient(to right,#09C6F9,#045DE9);
+}
+
+#dc_inicio{
+    top: 30px;
+    right: 135px;
+    text-decoration: none;
+    font-size: large;
+    font-style: bold;
+    color: black;
+    cursor: pointer;
+}
+
+.contenedor_dc .cd_body{
+    height: 800px;
+    border-style: solid;
+}

@@ -1,0 +1,67 @@
+*{
+    font-family: sans-serif;
+    color:black;
+}
+
+body{
+    margin: 0;
+    padding: none;
+}
+
+header{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    height: 80px;
+    padding: 10px;
+    background-color: lightgreen;
+}
+/*MEJORAR LAS CLASES E IDS PARA QUE EL CODIGO DE CSS QUEDE MAS CLARO*/
+.center{
+    display: flex;   
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 75vh;
+}
+
+.links{
+    position: relative;
+    height: 250px;
+    width: 500px;
+    background-color: lightgrey;
+    border-radius: 10px;
+    border-style: solid;
+}
+
+#link_iniciar_sesion{
+    text-decoration: none;
+    position: relative;
+    top: 30%;
+    right: 5%;
+    padding: 15px;
+    border: 3px solid black;
+    border-radius: 10px;
+    background-color: lightgreen;
+}
+
+#link_registrarse{
+    text-decoration: none;
+    position: relative;
+    top: 30%;
+    left: 5%;
+    padding: 15px;
+    border: 3px solid black;
+    border-radius: 10px;
+    background-color: lightgreen;
+}
+
+#link_ayuda{
+    text-decoration: none;
+    position: relative;
+    top: 50%;
+    padding: 15px;
+    border: 3px solid black;
+    border-radius: 10px;
+    background-color: lightgreen;
+}
