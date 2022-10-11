@@ -1,4 +1,5 @@
 <?php 
+    /**CLASE USUARIO */
     include("con_db.php");
 
     class Usuario extends Database{
