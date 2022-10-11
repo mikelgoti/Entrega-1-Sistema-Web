@@ -30,7 +30,6 @@
             genero varchar(40) DEFAULT NULL,
             publicacion varchar(40) DEFAULT NULL,
             formato varchar(40) DEFAULT NULL,
-            nombre varchar(40) DEFAULT NULL,
             descarga varchar(40) DEFAULT NULL
         )");
         

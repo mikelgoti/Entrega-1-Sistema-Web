@@ -11,7 +11,7 @@
         apellido1 varchar(30) DEFAULT NULL,
         telefono int(9) DEFAULT NULL,
         fecha varchar(10) DEFAULT NULL,
-        dni varcha(10) DEFAULT NULL,
+        dni varchar(10) DEFAULT NULL,
         password varchar(40) DEFAULT NULL
         
     )");
