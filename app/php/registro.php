@@ -3,15 +3,16 @@
     $obj = new Database();
     $con = $obj-> conectar();
 
-    $con-> query("CREATE TABLE IF NOT EXIST 'iniciados'(
-        'usuario' varchar(30) DEFAULT NULL,
-        'email' varchar(40) DEFAULT NULL,
-        'apellido' varchar(30) DEFAULT NULL,
-        'apellido1' varchar(30) DEFAULT NULL,
-        'telefono' int(9) DEFAULT NULL,
-        'fecha' varchar(10) DEFAULT NULL,
-        'dni' varcha(10) DEFAULT NULL,
-        'password' varchar(40) DEFAULT NULL
+    $con-> query("CREATE TABLE IF NOT EXISTS iniciados(
+        usuario varchar(30) DEFAULT NULL,
+        email varchar(40) DEFAULT NULL,
+        nombre varchar(40) DEFAULT NULL,
+        apellido varchar(30) DEFAULT NULL,
+        apellido1 varchar(30) DEFAULT NULL,
+        telefono int(9) DEFAULT NULL,
+        fecha varchar(10) DEFAULT NULL,
+        dni varchar(10) DEFAULT NULL,
+        password varchar(40) DEFAULT NULL
         
     )");
 
