@@ -24,13 +24,16 @@
         $con = $obj-> conectar();
 
         $con-> query("CREATE TABLE IF NOT EXISTS todo(
+
+            id int(100) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
             nombre varchar(40) DEFAULT NULL,
             autor varchar(40) DEFAULT NULL,
             editorial varchar(40) DEFAULT NULL,
             genero varchar(40) DEFAULT NULL,
             publicacion varchar(40) DEFAULT NULL,
             formato varchar(40) DEFAULT NULL,
-            descarga varchar(40) DEFAULT NULL
+            descarga varchar(500) DEFAULT NULL
+
         )");
         
         if(isset($_POST['b'])){
