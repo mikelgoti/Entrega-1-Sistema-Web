@@ -5,8 +5,13 @@
 
     $con-> query("CREATE TABLE IF NOT EXISTS iniciados(
         usuario varchar(30) DEFAULT NULL,
+<<<<<<< HEAD:app/php/controlador_registro.php
+        nombre varchar(30) DEFAULT NULL,
+        email varchar(40) DEFAULT NULL,
+=======
         email varchar(40) DEFAULT NULL,
         nombre varchar(40) DEFAULT NULL,
+>>>>>>> e31f492f56f34986a480488725ae9876aab5553e:app/php/registro.php
         apellido varchar(30) DEFAULT NULL,
         apellido1 varchar(30) DEFAULT NULL,
         telefono int(9) DEFAULT NULL,
@@ -36,10 +41,12 @@ $row = mysqli_fetch_row($res);
         //almacenar el hash generado de la password en la db
         $con->query("INSERT INTO iniciados(usuario,email,nombre,apellido,apellido1,telefono,fecha,dni,password)
         VALUES('$usuario','$email','$nombre','$apellido','$apellido1','$telefono','$fecha','$dni','$password')");
-        echo "Usuario agregado. Enorabuena ya estas registrado!";
+        $mensaje_correcto ="Usuario agregado. Ya te has registrado! Vuelve para iniciar sesion.";
+        include_once("pagina_registrarse.php");
     }
     else{
-        echo "El usuario ya existe pruebe con otro";
+        $mensaje_error = "El usuario ya existe pruebe con otro.";
+        include_once("pagina_registrarse.php");
     }
     
     /*function encriptarPass($p){

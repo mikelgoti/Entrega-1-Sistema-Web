@@ -5,7 +5,7 @@
  * EXPRESION REGULAR = ER
  */
 const expresiones = {
-    usuario: /^[a-zA-Z]{4,16}$/,/**ER= minusculas mayusculas digitos rango(4-16)*/
+    usuario: /^[a-zA-Z0-9]{4,16}$/,/**ER= minusculas mayusculas digitos rango(4-16)*/
     email: /^[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{2,5}$/,/**ER=*/
     nombre: /^[a-zA-Z]{4,16}$/,/**ER= minusculas mayusculas rango(4-16)*/
     apellido: /^[a-zA-Z]{4,16}$/,/**ER= minusculas mayusculas rango(4-16)*/
@@ -24,32 +24,15 @@ const f = document.querySelectorAll('#campo input');
 const boton = document.getElementById('btn_regis');
 
 /**
- * VARIABLES MENU
- */
-
-/*const pni = document.querySelectorAll('#perfil_nuevo_input');
-let btn_perfil = document.getElementById('perfil_cambio_btn');*/
-
-/**
+ * LISTENERS
  * CADA VEZ QUE SE CLICKE O SE APRIETE UNA TECLA REGISTRA LLAMANDO 
- * A LA FUNCION validarCampo()
+ * A LA FUNCION campo()
  */
 f.forEach( i => 
     {
         i.addEventListener('keyup',campo);
         i.addEventListener('blur',campo);
     })
-
-/**
- * CADA VEZ QUE SE EN EL PERFIL PARA CMABIAR ALGUN CAMPO
- */
-/*pni.forEach( i => 
-    {
-        i.addEventListener('keyup',campo);
-        i.addEventListener('blur',campo);
-    })*/
-
-
 
 /**
  * FUNCION PARA VALIDAR EL INGRESO DE LAS LETRAS QUE SE VAYAN TECLEANDO CON EL OBJETIVO DE VALIDAR

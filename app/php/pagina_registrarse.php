@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--LINK_CSS-->
-    <link rel="stylesheet" href="../css/registrarse.css">
+    <link rel="stylesheet" href="../css/pagina_registrarse.css">
     <!--FONTAWESOME_LINK-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" 
     integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" 
@@ -18,7 +18,7 @@
     <h1>Comic Central<br>Registrate</h1>
     </header>
 	<main>
-		<form action="../php/registro.php" method="post" class="registro" id="campo">
+		<form action="../php/controlador_registro.php" method="post" class="registro" id="campo">
 			
             <!--USUARIO-->
 			<div class="campo_grupo" id="grupo__usuario">
@@ -133,7 +133,9 @@
 			<div class="campo__grupo campo__grupo-btn-enviar" id="btn_registrar">
 				<button disabled type="submit" class="campo__btn" id="btn_regis">Registrar</button>
 			</div>
-			<a href="../index.html" id="link_volver">volver</a>
+			<a href="../index.php" id="link_volver">volver</a>
+			<div id="alerta_usuario_repetido"><?php if(isset($mensaje_error)){ echo $mensaje_error;}?></div>
+			<dvi id="alerta_usuario_correcto"><?php if(isset($mensaje_correcto)){echo $mensaje_correcto;}?></dvi>
 		</form>
 		
 	</main>

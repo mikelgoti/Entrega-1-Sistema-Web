@@ -21,9 +21,14 @@ body{
 }
 
 #cerrar_sesion{
+    color: black;
     position: absolute;
-    right: 0;
-    top: 100px;
+    right: 5px;
+    top: 155px;
+}
+
+#cerrar_sesion:hover{
+    text-shadow: 3px 0px 10px black;
 }
 
 .menuSpan{
@@ -199,28 +204,11 @@ body{
 }
 
 /*---------------------------------------------------------------------*/
-.grupo_registrar-mal .campo__icono-estado-x {
-    visibility: visible;
-	color: #bb2929;
-	opacity: 1;
-}
-
 .grupo_registrar-mal .campo_input input{
 	border: 10px solid #bb2929;
 }
 
-.grupo_registrar-mal .etiqueta{
-    font-weight: bold;
-    color: #bb2929;
-}
-
-.grupo_registrar-bien .campo__icono-estado-check {
-    visibility: visible;
-	color: #119200;
-	opacity: 1;
-}
-
-.grupo_registrar-bien .campo__input{
+.grupo_registrar-bien .campo_input input{
     border: 3px solid #119200;
 }
 
@@ -235,7 +223,6 @@ body{
 /*
     PASARELA DE IMAGENES 
 */
-
 .contenedor_imagenes_comic{
     display: flex;
     width: 95%;

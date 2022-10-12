@@ -30,8 +30,8 @@ else if(isset($_POST['usuario']) && isset($_POST['password'])){
          * AQUI SE PODRIA AGREGAR UN CONTADOR PARA PONER UN LIMITE A LA HORA DE ACCEDER A LA PAGINA
          * PONGAMOS 10 veces SI SE SUPERAN LLAMAMOS AL FBI
          */
-        echo "El usuario o la contraseña son incorrectos";
-        include_once("iniciarSesionHTML.php");
+        $mensaje_incorrecto = "El usuario o la contraseña son incorrectos.";
+        include_once("pagina_iniciarsesion.php");
     }
 }
 /**

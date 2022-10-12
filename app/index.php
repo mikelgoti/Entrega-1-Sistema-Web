@@ -10,7 +10,7 @@
     integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" 
     crossorigin="anonymous" referrerpolicy="no-referrer"/>
     
-    <title>TITULO</title>
+    <title>Comic Central</title>
     <link rel="icon" href="img/comic.png" type="image/x-icon">
 </head>
 <body>
@@ -22,8 +22,8 @@
     <!--LOGIN_OR_SINGUP-->
     <div class="center">
         <nav class="links">
-            <a href="php/iniciarSesionHTML.php" id="link_iniciar_sesion">INICIAR SESION<i class="fa-solid fa-comment-check"></i></a>
-            <a href="html/registrarse.html" id="link_registrarse">REGISTRARSE</a><br>
+            <a href="php/pagina_iniciarsesion.php" id="link_iniciar_sesion">INICIAR SESION<i class="fa-solid fa-comment-check"></i></a>
+            <a href="php/pagina_registrarse.php" id="link_registrarse">REGISTRARSE</a><br>
             <a href="html/ayuda.html" id="link_ayuda">AYUDA</a>
         </nav>
     </div>

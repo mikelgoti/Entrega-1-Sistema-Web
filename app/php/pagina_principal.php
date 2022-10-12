@@ -22,11 +22,11 @@
     <header id="inicio">
         <div class="titulo">
             <h1 id="TITULO_COMIC_CENTRAL">COMIC CENTRAL</h1>
-            <a href="../index.html"><h4 id="cerrar_sesion">Cerrar sesion</h4></a>
+            <a href="../index.php"><h4 id="cerrar_sesion"><i class="fa-solid fa-power-off"></i> Cerrar sesion</h4></a>
         </div>
         
                                             <!--<i class="fa-solid fa-bars"></i>-->
-        <span class="menuSpan" id="btnMenu"><i class="fa-regular fa-comment"></i></i>MENU</span>
+        <span class="menuSpan" id="btnMenu"><i class="fa-solid fa-bars"></i></i> MENU</span>
         <nav class="menu_nav">
             <ul class="menu" id="menu">
                 <li class="menu_a"><a href="#" class="menu_link">CONTACTO</a></li>
@@ -37,7 +37,7 @@
                 <li class="menu_a"><a href="busqueda_todo.php" target="_blank" class="menu_link"></i><i class="fa-regular fa-rectangle-list"></i>  LISTA COMUNITARIA</a></li>
                 <div id="segundomenu">
                     <li class="menu_a contenedor-perfil">
-                        <a href="#" class="menu_link perfil-btn"><i class="fa-solid fa-circle-user"></i>  USUARIO  <i class="fa-solid fa-arrow-turn-down"></i></a>
+                        <a href="#" class="menu_link perfil-btn"><i class="fa-solid fa-circle-user"></i>  <?php echo $usuario-> getUsuario()?>  <i class="fa-solid fa-arrow-turn-down"></i></a>
                         <ul class="perfil">
                             <!--USUARIO-->
                             <li class="menu__a">Usuario<a href="#" id="aqui" onclick="actualizar('div_usuario','input_usuario')"><i class="fa-solid fa-rotate"></i></a>
@@ -155,7 +155,7 @@
                                     </div>
                                     <form action="actualizarTabla.php" method="POST">
                                         <div class="input_cambio" id="input_fecha" style="display: none;">
-                                            <input type="text" class="input" name="fechaAntiguo" placeholder="fecha antiguo">
+                                            <input type="text" class="input" name="fechaAntiguo" placeholder="fecha antigua">
                                             <br>
                                             <div id="grupo__fecha">
                                             <input type="text" class="campo_input" name="fecha" id="perfil_nuevo_input" placeholder="nueva fecha">
@@ -191,10 +191,10 @@
                                     </div>
                                     <form action="actualizarTabla.php" method="POST">
                                         <div class="input_cambio" id="input_password" style="display: none;">
-                                            <input type="text" class="input" name="passwordAntiguo" placeholder="password antiguo">
+                                            <input type="text" class="input" name="passwordAntiguo" placeholder="contraseña antigua">
                                             <br>
                                             <div id="grupo__password">
-                                            <input type="text" class="campo_input" name="password" id="perfil_nuevo_input" placeholder="password nuevo">
+                                            <input type="text" class="campo_input" name="password" id="perfil_nuevo_input" placeholder="contraseña nueva">
                                             </div>
                                             <input class="input_cambio_btn" id="perfil_cambio_btn" type="submit" value="Cambiar" name="btn_p">
                                         </div>
@@ -411,7 +411,6 @@
     </footer>
 
     <!--Scripts-->
-    <script src="../js/scriptvalidacion.js"></script>
     <script src="../js/menu.js"></script>
     <script src="../js/scripthome.js"></script>
 </body>
