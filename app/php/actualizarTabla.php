@@ -10,7 +10,6 @@
     switch(true){
 
         case isset($_POST['btn_u']):
-            echo "USUARIO";
             $uN= $_POST['usuario'];
             $uA = $_POST['usuarioAntiguo'];
             $col = "usuario";
@@ -68,7 +67,10 @@
             update($col,$a1A,$a1N);
         break;
 
-        
+        case isset($_POST['btn_p']):
+            $pN = $_POST['password'];
+            $pA = $_POST['passwordAntiguo'];
+            $col = "password";
     }
 
     function update($col,$pAntiguo,$pNuevo){
@@ -83,12 +85,11 @@
         if($row[0] == 1){
             $con-> query("UPDATE iniciados SET $col= '$pNuevo' WHERE $col= '$pAntiguo'");
             echo "Se a actualizado la informacion satisfactoriamente. Vuelve a iniciar sesion para verificar los cambios.";
-
+            ?> <a href="pagina_iniciarsesion.php">Iniciar sesion de nuevo</a><?php
         }
         else{
             echo "Para actualizar la informacion introduce correctamente tu antiguo ",$col,".";
-
-            include_once("pagina_principal.php");
+            ?> <a href="pagina_iniciarsesion.php">Iniciar sesion de nuevo</a><?php
         }
         
     }

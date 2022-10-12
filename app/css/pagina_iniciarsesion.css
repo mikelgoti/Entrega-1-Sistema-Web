@@ -2,10 +2,6 @@
     font-family: sans-serif;
 }
 
-main{
-
-}
-
 body{
     margin: 0;
 }
@@ -17,6 +13,12 @@ header{
     height: 80px;
     padding: 10px;
     background-color: lightgreen;
+}
+
+#mensaje_incorrecto{
+    color: red;
+    font-size: large;
+    
 }
 
 .registro_total{
@@ -66,5 +68,33 @@ header{
 #btn{
     padding: 40px;
     position: relative;
-    left: 20px;
+    left: 30px;
 }
+
+.campos_inicio button{
+    width: 200px;
+    height: 40px;
+    border-style: solid;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: 'Bangers', cursive;
+    font-size: large;
+}
+
+a{
+    position: relative;
+    left: 25px;
+    text-decoration: none;
+    width: 200px;
+    height: 35px;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: center;
+    align-items: center;
+    font-family: sans-serif;
+    font-family: 'Bangers', cursive;
+    color: black;
+    font-size: large;
+}
+
+

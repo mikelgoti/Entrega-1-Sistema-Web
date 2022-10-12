@@ -10,6 +10,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" 
     integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" 
     crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--FUENTE PARA EL TITULO DE GOOGLE FONTS-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
     
     <title>TITULO</title>
     <link rel="icon" href="../img/comic.png" type="image/x-icon">
@@ -43,34 +47,32 @@
             
             <form id="filtro" class="searchbar" action="busqueda_todo.php" method="POST">
             <h2>Filtro de busqueda.</h2>
-                    <h4>Se filtran solo las columnas nombre, autor, editorial, genero.
-                    Para ver la lista completa de nuevo presiona la lupa.
-                </h4>    
-            <input type="text" id="search" name="b" placeholder="buscador..." ><button type="submit" class="btn_lupa_todo"><i class="fa-solid fa-magnifying-glass"></i></button>
+            <input type="text" id="search" name="b" placeholder="busca por nombre, autor, editorial, genero " ><button type="submit" class="btn_lupa_todo"><i class="fa-solid fa-magnifying-glass"></i></button>
             </form>
         </div>
     </header>
-    <form class="contenedor" action="borrar.php" method="POST">
+    <form class="contenedor_agregar" action="borrar.php" method="POST">
         <div class="agregar_comic" id="agregar">
-            <div class="campo_usuario">
+            
+            <div class="campo">
                 <input type="text" name="nombre" placeholder="nombre comic/manga/libro">
             </div>
-            <div class="campo_autor">
+            <div class="campo">
                 <input type="text" name="autor" placeholder="autor">
             </div>
-            <div class="campo_editorial">
+            <div class="campo">
                 <input type="text" name="editorial" placeholder="editorial">
             </div>
-            <div class="campo_genero">
+            <div class="campo">
                 <input type="text" name="genero" placeholder="genero">
             </div>
-            <div class="campo_publicacion">
+            <div class="campo">
                 <input type="text" name="publicacion" placeholder="fecha de publicacion">
             </div>
-            <div class="campo_formato">
+            <div class="campo">
                 <input type="text" name="formato" placeholder="breve formato">
             </div>
-            <div class="campo_link">
+            <div class="campo">
                 <input type="text" name="descarga" placeholder="link">
             </div>
             <input type="submit" name="btn_agregar" value="agregar">
@@ -86,7 +88,7 @@
             
             while($fila = mysqli_fetch_array($res)){
         ?>
-        <form class="contenedor" action="borrar.php" method="POST">
+        <form class="contenedor_editar" action="borrar.php" method="POST">
             <div class="agregar_comic" id="agregar">
                 <div class="campo_id">
                     <input type="hidden" name="id"  value="<?php echo $fila['id']?>">
