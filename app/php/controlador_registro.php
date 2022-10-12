@@ -5,8 +5,13 @@
 
     $con-> query("CREATE TABLE IF NOT EXISTS iniciados(
         usuario varchar(30) DEFAULT NULL,
+<<<<<<< HEAD:app/php/controlador_registro.php
         nombre varchar(30) DEFAULT NULL,
         email varchar(40) DEFAULT NULL,
+=======
+        email varchar(40) DEFAULT NULL,
+        nombre varchar(40) DEFAULT NULL,
+>>>>>>> e31f492f56f34986a480488725ae9876aab5553e:app/php/registro.php
         apellido varchar(30) DEFAULT NULL,
         apellido1 varchar(30) DEFAULT NULL,
         telefono int(9) DEFAULT NULL,
