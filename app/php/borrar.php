@@ -16,9 +16,19 @@
             $d = $_POST['formato'];
             $ld = $_POST['descarga'];
 
-            $con-> query("UPDATE todo SET nombre='$n',autor='$a',editorial='$e',genero='$g',publicacion='$p',formato='$d',descarga='$ld' WHERE id='$i'");
-            echo "fila editada.";
-            include_once("lista_comunitaria.php");
+            $res = $con->query("SELECT EXISTS (SELECT * FROM todo WHERE nombre='$n');");
+            $row = mysqli_fetch_row($res);
+
+            if($row[0] == 0){
+                $con-> query("UPDATE todo SET nombre='$n',autor='$a',editorial='$e',genero='$g',publicacion='$p',formato='$d',descarga='$ld' WHERE id='$i'");
+                echo "fila editada.";
+                include_once("lista_comunitaria.php");
+            }
+            else{
+                echo "La modificacion del articulo coincide con otro en la lista.";
+                include_once("lista_comunitaria.php");
+            }
+            
         break;
 
         case isset($_POST['btn_agregar']):
@@ -27,13 +37,21 @@
             $e = $_POST['editorial'];
             $g = $_POST['genero'];
             $p = $_POST['publicacion'];
-            $d = $_POST['formato'];
+            $f = $_POST['formato'];
             $ld = $_POST['descarga'];
 
-            $con-> query("INSERT INTO todo(nombre,autor,editorial,genero,publicacion,formato,descarga)VALUES('$n','$a','$e','$g','$p','$d','$ld')");
+            $res = $con->query("SELECT EXISTS (SELECT * FROM todo WHERE nombre='$n');");
+            $row = mysqli_fetch_row($res);
 
-            echo "Fila agregada.";
-            include_once("lista_comunitaria.php");
+            if($row[0] == 0){//No hay nada agregado a la lista con ese nombre
+                $con-> query("INSERT INTO todo(nombre,autor,editorial,genero,publicacion,formato,descarga)VALUES('$n','$a','$e','$g','$p','$f','$ld')");
+                echo "Fila agregada.";
+                include_once("lista_comunitaria.php");
+            }
+            else{
+                echo "Ya existe un articulo con ese nombre en la lista. Si es diferente modifica el nombre y vuelve a intentarlo.";
+                include_once("lista_comunitaria.php");
+            }
         break;
 
         case isset($_GET['borrar']):

@@ -1,12 +1,10 @@
 <?php
 
-    /*if(isset($_POST['eNuevo']) && isset($_POST['eAntiguo'])){
-        $eNuevo = $_POST['eNuevo'];
-        $eAntiguo = $_POST['eAntiguo'];
-        $col = "email";
+    include_once("con_db.php");
 
-        update($col,$eAntiguo,$eNuevo);*/
-        
+    $obj = new Database();
+    $con = $obj-> conectar();
+            
     switch(true){
 
         case isset($_POST['btn_u']):
@@ -14,8 +12,17 @@
             $uA = $_POST['usuarioAntiguo'];
             $col = "usuario";
 
-            //echo $uN,$uA,$col;
-            update($col,$uA,$uN);
+            $res = $con->query("SELECT EXISTS (SELECT * FROM iniciados WHERE usuario='$uN');");
+            $row = mysqli_fetch_row($res);
+
+            if($row[0] == 0){
+                //echo $uN,$uA,$col;
+                update($col,$uA,$uN);
+            }
+            else{
+                echo "El usuario ya existe! Prueba con otro.";
+                ?><a href="pagina_iniciarsesion.php">Vuelve a iniciar sesion e intentalo de nuevo.</a><?php
+            }
         break;
 
         case isset($_POST['btn_e']):
@@ -74,6 +81,7 @@
     }
 
     function update($col,$pAntiguo,$pNuevo){
+
         include_once("con_db.php");
 
         $obj = new Database();
@@ -85,11 +93,11 @@
         if($row[0] == 1){
             $con-> query("UPDATE iniciados SET $col= '$pNuevo' WHERE $col= '$pAntiguo'");
             echo "Se a actualizado la informacion satisfactoriamente. Vuelve a iniciar sesion para verificar los cambios.";
-            ?> <a href="pagina_iniciarsesion.php">Iniciar sesion de nuevo</a><?php
+            ?> <a href="pagina_iniciarsesion.php">Iniciar sesion de nuevo.</a><?php
         }
         else{
             echo "Para actualizar la informacion introduce correctamente tu antiguo ",$col,".";
-            ?> <a href="pagina_iniciarsesion.php">Iniciar sesion de nuevo</a><?php
+            ?> <a href="pagina_iniciarsesion.php">Vuelve a iniciar sesion e intentalo de nuevo.</a><?php
         }
         
     }

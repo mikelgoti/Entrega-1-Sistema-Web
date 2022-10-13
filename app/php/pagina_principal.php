@@ -34,7 +34,7 @@
                 <li class="menu_a"><a href="#" class="menu_link">MARVEL</a></li>
                 <li class="menu_a"><a href="#" class="menu_link">MANGAS</a></li>
                 <li class="menu_a"><a href="#" class="menu_link"></i>LIBROS</a></li>
-                <li class="menu_a"><a href="lista_comunitaria.php" target="_blank" class="menu_link"></i><i class="fa-regular fa-rectangle-list"></i>  LISTA COMUNITARIA</a></li>
+                <li class="menu_a"><a href="lista_comunitaria.php" target="_blank" class="menu_link"></i><i class="fa-regular fa-rectangle-list"></i>  LISTA COMUNITARIA <i class="fa-solid fa-arrow-up-right-from-square"></i></a></li>
                 <div id="segundomenu">
                     <li class="menu_a contenedor-perfil">
                         <a href="#" class="menu_link perfil-btn"><i class="fa-solid fa-circle-user"></i>  <?php echo $usuario-> getUsuario()?>  <i class="fa-solid fa-arrow-turn-down"></i></a>
@@ -220,7 +220,7 @@
                     <div>
                         <a href="#">
                             <picture>
-                                <img src="../img/b1.png" alt="Image1">
+                                <img src="../img/pasarela/b1.png" alt="Image1">
                                 <button class="descargar_btn"><i class="fa-solid fa-cloud-arrow-down"></i>Descargar</button>
                             </picture>
                         </a>
@@ -230,7 +230,7 @@
                     <div>
                         <a href="#">
                             <picture>
-                                <img src="../img/b1.png" alt="Image2">
+                                <img src="../img/pasarela/s1.png" alt="Image2">
                                 <button class="descargar_btn"><i class="fa-solid fa-cloud-arrow-down"></i>Descargar</button>
                             </picture>
                         </a>
@@ -240,7 +240,7 @@
                     <div>
                         <a href="#">
                             <picture>
-                                <img src="../img/b1.png" alt="Image3">
+                                <img src="../img/pasarela/vader.jpg" alt="Image3">
                                 <button class="descargar_btn"><i class="fa-solid fa-cloud-arrow-down"></i>Descargar</button>
                             </picture>
                         </a>
@@ -250,7 +250,7 @@
                     <div>
                         <a href="#">
                             <picture>
-                                <img src="../img/b1.png" alt="Image4">
+                                <img src="../img/pasarela/b2.png" alt="Image4">
                                 <button class="descargar_btn"><i class="fa-solid fa-cloud-arrow-down"></i>Descargar</button>
                             </picture>
                         </a>
@@ -260,7 +260,7 @@
                     <div>
                         <a href="#">
                             <picture>
-                                <img src="../img/b1.png" alt="Image5">
+                                <img src="../img/pasarela/5.jpg" alt="Image5">
                                 <button class="descargar_btn"><i class="fa-solid fa-cloud-arrow-down"></i>Descargar</button>
                             </picture>
                         </a>
@@ -270,7 +270,7 @@
                     <div>
                         <a href="#">
                             <picture>
-                                <img src="../img/b1.png" alt="Image6">
+                                <img src="../img/pasarela/6.jpg" alt="Image6">
                                 <button class="descargar_btn"><i class="fa-solid fa-cloud-arrow-down"></i>Descargar</button>
                             </picture>
                         </a>
@@ -280,7 +280,7 @@
                     <div>
                         <a href="#">
                             <picture>
-                                <img src="../img/b1.png" alt="Image7">
+                                <img src="../img/pasarela/7.jpg" alt="Image7">
                                 <button class="descargar_btn"><i class="fa-solid fa-cloud-arrow-down"></i>Descargar</button>
                             </picture>
                         </a>
@@ -290,7 +290,7 @@
                     <div>
                         <a href="#">
                             <picture>
-                                <img src="../img/b1.png" alt="Image8">
+                                <img src="../img/pasarela/8.jpg" alt="Image8">
                                 <button class="descargar_btn"><i class="fa-solid fa-cloud-arrow-down"></i>Descargar</button>
                             </picture>
                         </a>
@@ -300,7 +300,7 @@
                     <div>
                         <a href="#">
                             <picture>
-                                <img src="../img/b1.png" alt="Image9">
+                                <img src="../img/pasarela/9.jpg" alt="Image9">
                                 <button class="descargar_btn"><i class="fa-solid fa-cloud-arrow-down"></i>Descargar</button>
                             </picture>
                         </a>
@@ -310,7 +310,7 @@
                     <div>
                         <a href="#">
                             <picture>
-                                <img src="../img/b1.png" alt="Image10">
+                                <img src="../img/pasarela/10.jpg" alt="Image10">
                                 <button class="descargar_btn"><i class="fa-solid fa-cloud-arrow-down"></i>Descargar</button>
                             </picture>
                         </a>
@@ -320,7 +320,7 @@
                     <div>
                         <a href="#">
                             <picture>
-                                <img src="../img/b1.png" alt="Image11">
+                                <img src="../img/pasarela/11.jpg" alt="Image11">
                                 <button class="descargar_btn"><i class="fa-solid fa-cloud-arrow-down"></i>Descargar</button>
                             </picture>
                         </a>
@@ -330,7 +330,7 @@
                     <div>
                         <a href="#">
                             <picture>
-                                <img src="../img/b1.png" alt="Image12">
+                                <img src="../img/pasarela/12.jpg" alt="Image12">
                                 <button class="descargar_btn"><i class="fa-solid fa-cloud-arrow-down"></i>Descargar</button>
                             </picture>
                         </a>
@@ -387,11 +387,50 @@
             </div><!--fin_must_reads-->
         </div>
 
-    <!--SLIDERS LIGTHS-->
+    <!--SLIDERS LIGTHS Y LISTA ABREVIADA-->
         <div class="ligths">
-
+            <h1><a id="link_lista_comunitaria_titulo" href="lista_comunitaria.php" target="_blank">LISTA COMUNITARIA</a> AÑADIDOS RECIENTES</h1>
+            <div class="contenedor_tabla_recientes">
+                <table class="tabla_recientes">
+                    <thead class="tabla_recientes_head">
+                        <th></th>
+                        <th>NOMBRE</th>
+                        <th>AUTOR</th>
+                        <th>EDITORIAL</th>
+                        <th>FORMATO</th>
+                        <th>DESCARGA</th>
+                    </thead>
+                    <tbody>
+                        <?php 
+                            include_once("con_db.php");
+                            $obj = new Database();
+                            $con = $obj-> conectar();
+                            
+                            $f = $con-> query("SELECT * FROM todo ORDER BY id DESC LIMIT 6");
+                            $cont = 1;
+                            while($fil = mysqli_fetch_array($f)){
+                                
+                                if( $fil['id'] == $fil['id']){
+                                    $fil['id'] = $cont;
+                                    $cont ++;
+                                }
+                            ?>
+                                <tr>
+                                    <td><?php echo $fil['id']?></td>
+                                    <td><?php echo $fil['nombre']?></td>
+                                    <td><?php echo $fil['autor']?></td>
+                                    <td><?php echo $fil['editorial']?></td>
+                                    <td><?php echo $fil['formato']?></td>
+                                    <td><div class="icono_link_descarga"><a href="<?php echo $fil['descarga'];?>" target="_blank"><i id="icono_descarga" class="fa-solid fa-cloud-arrow-down"></i>Descargar</a></div></td>
+                                </tr>
+                            <?php
+                            }
+                        ?>
+                    </tbody>
+                </table>
+            </div>
         </div>
-    </div>
+    </div><!--FINAL MUST_READS Y LISTA-->
     
     <!--SECTION-DC-->
     <section class="contenedor_dc">

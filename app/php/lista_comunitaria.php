@@ -150,7 +150,7 @@
                                 <td><?php echo $fila['genero'];?></td>
                                 <td><?php echo $fila['publicacion'];?></td>
                                 <td><?php echo $fila['formato'];?></td>
-                                <td> <div class="icono_link_descarga"><a href="<?php echo $fila['descarga'];?>" target="_blank"><i id="icono_descarga" class="fa-solid fa-cloud-arrow-down"></i>Descargar</a></td></div>
+                                <td><div class="icono_link_descarga"><a href="<?php echo $fila['descarga'];?>" target="_blank"><i id="icono_descarga" class="fa-solid fa-cloud-arrow-down"> </i>Descargar</a></div></td>
                                 <!--El link introducido se guarda en la base de datos y directamente se carga en el href-->
                                 <td>
                                     <!--BOTON DE EDITAR-->
