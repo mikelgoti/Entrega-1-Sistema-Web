@@ -218,7 +218,7 @@
             <div class="slider-seguimiento" id="seguimiento">
                 <div class="slider">
                     <div>
-                        <a href="#">
+                        <a href="https://mega.nz/file/2RBA2JIQ#XHdO70ioJqWbC-fKP1DdT16XjFRH6WUEFRzrIhSrM2o" target="_blank">
                             <picture>
                                 <img src="../img/pasarela/b1.png" alt="Image1">
                                 <button class="descargar_btn"><i class="fa-solid fa-cloud-arrow-down"></i>Descargar</button>
@@ -228,7 +228,7 @@
                 </div>
                 <div class="slider">
                     <div>
-                        <a href="#">
+                        <a href="https://mega.nz/file/6dImRB6J#QZR2fTp_JqPUrCq5hVaS8wnhkgT33H2h6P_a7GzMMGA" target="_blank">
                             <picture>
                                 <img src="../img/pasarela/s1.png" alt="Image2">
                                 <button class="descargar_btn"><i class="fa-solid fa-cloud-arrow-down"></i>Descargar</button>
@@ -238,17 +238,17 @@
                 </div>
                 <div class="slider">
                     <div>
-                        <a href="#">
+                        <a href="https://mega.nz/file/3BwVBISJ#Dy4likQOV7FVwU1c57jzIeV5Ggz3J3KjklPSPwJzpnk" target="_blank">
                             <picture>
                                 <img src="../img/pasarela/vader.jpg" alt="Image3">
-                                <button class="descargar_btn"><i class="fa-solid fa-cloud-arrow-down"></i>Descargar</button>
+                                <button  class="descargar_btn"><i class="fa-solid fa-cloud-arrow-down"></i>Descargar</button>
                             </picture>
                         </a>
                     </div>
                 </div>
                 <div class="slider">
                     <div>
-                        <a href="#">
+                        <a href="https://mega.nz/file/iBIyGQ4Z#8HdzHnAfoT3cN32VISQl4SKbuLKgY7ot-fAkAZFVWD8" target="_blank">
                             <picture>
                                 <img src="../img/pasarela/b2.png" alt="Image4">
                                 <button class="descargar_btn"><i class="fa-solid fa-cloud-arrow-down"></i>Descargar</button>
@@ -258,7 +258,7 @@
                 </div>
                 <div class="slider">
                     <div>
-                        <a href="#">
+                        <a href="https://mega.nz/file/zVww1ZJB#oayaSftuvYQDSPJEJ00qoNl1e1OnLzm-X_4d-W6SFEs" target="_blank">
                             <picture>
                                 <img src="../img/pasarela/5.jpg" alt="Image5">
                                 <button class="descargar_btn"><i class="fa-solid fa-cloud-arrow-down"></i>Descargar</button>
@@ -268,7 +268,7 @@
                 </div>
                 <div class="slider">
                     <div>
-                        <a href="#">
+                        <a href="https://mega.nz/file/6BQBhByR#BdKJ1hilacwNFQRKL7YdMuySTQAZKpNxISu-NIt3yYg" target="_blank">
                             <picture>
                                 <img src="../img/pasarela/6.jpg" alt="Image6">
                                 <button class="descargar_btn"><i class="fa-solid fa-cloud-arrow-down"></i>Descargar</button>
@@ -278,7 +278,7 @@
                 </div>
                 <div class="slider">
                     <div>
-                        <a href="#">
+                        <a href="https://mega.nz/file/TVQykD6T#t6WQPg18CchAVfGQWSKtBA1yCiP1qi7wqUxknMdY4BU" target="_blank">
                             <picture>
                                 <img src="../img/pasarela/7.jpg" alt="Image7">
                                 <button class="descargar_btn"><i class="fa-solid fa-cloud-arrow-down"></i>Descargar</button>
@@ -288,7 +288,7 @@
                 </div>
                 <div class="slider">
                     <div>
-                        <a href="#">
+                        <a href="https://mega.nz/file/aIoEWJRb#oYIp3RKn8EP3_A-wZgmuM6K-CD9Rj4_IZS190uqDVtQ" target="_blank">
                             <picture>
                                 <img src="../img/pasarela/8.jpg" alt="Image8">
                                 <button class="descargar_btn"><i class="fa-solid fa-cloud-arrow-down"></i>Descargar</button>
@@ -298,7 +298,7 @@
                 </div>
                 <div class="slider">
                     <div>
-                        <a href="#">
+                        <a href="#" target="_blank">
                             <picture>
                                 <img src="../img/pasarela/9.jpg" alt="Image9">
                                 <button class="descargar_btn"><i class="fa-solid fa-cloud-arrow-down"></i>Descargar</button>
@@ -308,7 +308,7 @@
                 </div>
                 <div class="slider">
                     <div>
-                        <a href="#">
+                        <a href="https://mega.nz/file/3c4zFD5b#Ilv3lfv2X44zQGGezSBFXph4miJvgn8QnWUyV-jjELU" target="_blank">
                             <picture>
                                 <img src="../img/pasarela/10.jpg" alt="Image10">
                                 <button class="descargar_btn"><i class="fa-solid fa-cloud-arrow-down"></i>Descargar</button>
@@ -318,7 +318,7 @@
                 </div>
                 <div class="slider">
                     <div>
-                        <a href="#">
+                        <a href="https://mega.nz/file/nI4FwagY#lXWvpyn1Vf6nvgy3GpnsiWofWNHNmXwfhPniRcJ5oBw" target="_blank">
                             <picture>
                                 <img src="../img/pasarela/11.jpg" alt="Image11">
                                 <button class="descargar_btn"><i class="fa-solid fa-cloud-arrow-down"></i>Descargar</button>
@@ -328,7 +328,7 @@
                 </div>
                 <div class="slider">
                     <div>
-                        <a href="#">
+                        <a href="https://mega.nz/file/TEpUAKIZ#XOJBM_qOBH_58Q5oJ-DHyk3fnl8otgAQ4xOoidfjTPk" target="_blank">
                             <picture>
                                 <img src="../img/pasarela/12.jpg" alt="Image12">
                                 <button class="descargar_btn"><i class="fa-solid fa-cloud-arrow-down"></i>Descargar</button>

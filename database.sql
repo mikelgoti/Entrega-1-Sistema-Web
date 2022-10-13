@@ -44,9 +44,7 @@ CREATE TABLE `iniciados` (
 --
 
 INSERT INTO `iniciados` (`usuario`, `nombre`, `email`, `apellido`, `apellido1`, `telefono`, `fecha`, `dni`, `password`) VALUES
-('mikel', 'aquiles', 'adminadmin@gmail.com', 'agamenon', 'patroclo', 655860404, '1942-01-01', '12345678-Z', '12345'),
-('admin1', 'jogfdgedf', 'adminadmin@gmail.com', 'asdas', 'asdasd', 123131233, '1111-22-33', '12345678-Z', '11111'),
-('admin2', 'adminator', 'admin2admin2@hotmail.es', 'terminator', 'joncameron', 987654321, '2222-33-44', '12345678-Z', '12345');
+('admin', 'admin', 'adminadmin@gmail.com', 'adminadmin', 'adminadminadmin', 655860404, '1942-01-01', '12345678-Z', '12345');
 
 -- --------------------------------------------------------
 
