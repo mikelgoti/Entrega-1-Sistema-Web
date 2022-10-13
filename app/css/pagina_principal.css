@@ -75,7 +75,7 @@ body{
     background: #08B0F6;
     padding: 10px;
     padding-left: 10px;
-    width: 223px;
+    width: 250px;
     cursor: pointer;
     font-family: 'Bangers', cursive;
     font-style: bold;
@@ -102,8 +102,8 @@ body{
 .perfil .php_info{
     color: white;
     font-size: medium;
-    margin-left: 20px;
-    font-family: 'Bangers', cursive;
+    margin-left: 10px;
+    font-size: 20px;
 }
 
 .input_cambio{
@@ -284,6 +284,7 @@ body{
 }
 
 .slider picture:hover .descargar_btn{
+    border-color: black;
     background-color: rgb(33, 216, 128);
     opacity: 1;
     visibility: visible;
@@ -367,7 +368,7 @@ body{
 .texto{
     margin-right: 25px;
 }
-
+/*LISTA ABR*/
 .ligths{
     height: 900px;
     width: 100%;
@@ -375,10 +376,58 @@ body{
     background-image: linear-gradient(to right,lightgrey,grey);
 }
 
+#link_lista_comunitaria_titulo{
+    text-decoration: none;
+    color: black;
+}
+
+#link_lista_comunitaria_titulo:hover{
+    text-shadow: 0px 0px 5px;
+}
+
+/*TABLA RECIENTES*/
+.tabla_recientes{
+    border-collapse: collapse;
+    width: 97%;
+    margin-left: 5px;
+    margin-top: 30px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.tabla_recientes th{
+    background-color: #0075FF;
+    padding: 8px;
+}
+
+.tabla_recientes td{
+    text-align: center;
+    border-bottom: 2px solid rgba(0,0,0,.15);
+    padding: 10px;
+}
+
+.table_recientes:hover tr{
+    background-color: #0075FF;
+}
+
+.tabla_recientes i{
+    color: rgb(33, 216, 128);
+}
+
+.tabla_recientes a{
+    text-decoration: none;
+    color: black;
+}
+
+.tabla_recientes a:hover i{
+    text-shadow: 0px 0px 5px  #119200;
+}
+
+
 /*PARA PONER EN COLUMA LECATURAS OBLIGAROTIAS Y SLIDER
     CUANDO HAGA EL SLIDER EN LIGTHS IGUAL HAY QUE CAMBIAR EL MAX-WIDTH POR ALGO MAS
 */
-@media(max-width:1000px){
+@media(max-width:1315px){
 
     .secondSection{
         flex-direction: column;
@@ -386,15 +435,16 @@ body{
 
     .contenedor_must_reads{
         width: 100%;
+        background-image: linear-gradient(to top,lightgrey,grey);
     }
 
     .ligths{
-        margin-top: 780px;
+        background-image: linear-gradient(to bottom,lightgrey,grey);
     }
 }
 
 /*CONTENEDOR DE LA IMAGEN , TITULO Y EL PARRAFO*/
-@media(max-width:630px){
+@media(max-width:635px){
     
     .must_reads{
         flex-direction: column;
@@ -402,6 +452,17 @@ body{
 
     .must_reads div:first-child{
         order: 1;
+    }
+
+    .ligths{
+        margin-top: 780px;
+    }
+}
+
+@media(max-width: 447px){
+    
+    .ligths{
+        margin-top: 1000px;
     }
 }
 
