@@ -110,6 +110,7 @@ const validar = (exp, input, c) => {
     const param = document.getElementById(`campo__input-error-${c}`);
 
     if(exp.test(input.value)){
+        console.log("bien");
         param.style.display = "none";
         document.getElementById(`grupo__${c}`).classList.remove('grupo_registrar-mal');
         document.getElementById(`grupo__${c}`).classList.add('grupo_registrar-bien');
@@ -169,6 +170,7 @@ const validar = (exp, input, c) => {
             }
         }
         else{
+            console.log("mal");
             param.style.display = "block";
             document.getElementById(`grupo__${c}`).classList.remove('grupo_registrar-bien');
             document.getElementById(`grupo__${c}`).classList.add('grupo_registrar-mal');

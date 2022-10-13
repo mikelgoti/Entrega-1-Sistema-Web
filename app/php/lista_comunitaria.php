@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--CSS_LINK-->
-    <link rel="stylesheet" href="../css/tabla_todo.css">
+    <link rel="stylesheet" href="../css/lista_comunitaria.css">
     <!--FONTAWESOME_LINK-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" 
     integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" 
@@ -15,7 +15,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
     
-    <title>TITULO</title>
+    <title>Comic Central</title>
     <link rel="icon" href="../img/comic.png" type="image/x-icon">
 </head>
 <body>
@@ -23,38 +23,32 @@
     <header>
         <h1><?php
         include_once("con_db.php");
-    
+
         $obj = new Database();
-        $con = $obj-> conectar();
-
-        $con-> query("CREATE TABLE IF NOT EXISTS todo(
-
-            id int(100) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-            nombre varchar(40) DEFAULT NULL,
-            autor varchar(40) DEFAULT NULL,
-            editorial varchar(40) DEFAULT NULL,
-            genero varchar(40) DEFAULT NULL,
-            publicacion varchar(40) DEFAULT NULL,
-            formato varchar(40) DEFAULT NULL,
-            descarga varchar(500) DEFAULT NULL
-
-        )");
+        $con = $obj->conectar();
         
         if(isset($_POST['b'])){
-            echo "HAS BUSCADO ",$_POST['b'];}
+            $input = $_POST['b'];
+            if($input == ""){
+
+            }
+            else{
+                echo "HAS BUSCADO ",$_POST['b'];}
+            }
+            
         ?>
         </h1>
         <div class="header2">
-            <h1>EDITA, AGREGA Y BORRA.</h1>
+            <h1>LISTA COMUNITARIA</h1>
             
-            <form id="filtro" class="searchbar" action="busqueda_todo.php" method="POST">
+            <form id="filtro" class="searchbar" action="lista_comunitaria.php" method="POST">
             <h2>Filtro de busqueda.</h2>
             <input type="text" id="search" name="b" placeholder="busca por nombre, autor, editorial, genero " ><button type="submit" class="btn_lupa_todo"><i class="fa-solid fa-magnifying-glass"></i></button>
             </form>
         </div>
     </header>
     <form class="contenedor_agregar" action="borrar.php" method="POST">
-        <div class="agregar_comic" id="agregar">
+        <div class="agregar_comic" id="add_agregar">
             
             <div class="campo">
                 <input type="text" name="nombre" placeholder="nombre comic/manga/libro">
@@ -85,35 +79,35 @@
     if(isset($_POST['btn_editar'])){
         $id = $_POST['id'];
         $res = $con-> query("SELECT * FROM todo WHERE id='$id'");
-        echo "Fila de edicion, cambiale el nombre, el autor, etc... y presiona editar para guardar los cambios y agregarlos a la lista.";
+        /*echo "Fila de edicion, cambiale el nombre, el autor, etc... y presiona editar para guardar los cambios y agregarlos a la lista.";*/
         if(mysqli_num_rows($res) > 0){
             
             while($fila = mysqli_fetch_array($res)){
         ?>
         <form class="contenedor_editar" action="borrar.php" method="POST">
-            <div class="agregar_comic" id="agregar">
-                <div class="campo_id">
+            <div class="agregar_comic" >
+                <div class="campo">
                     <input type="hidden" name="id"  value="<?php echo $fila['id']?>">
                 </div>
-                <div class="campo_usuario">
+                <div class="campo">
                     <input type="text" name="nombre"  value="<?php echo $fila['nombre']?>" placeholder="nombre comic/manga/libro">
                 </div>
-                <div class="campo_autor">
+                <div class="campo">
                     <input type="text" name="autor" value="<?php echo $fila['autor']?>" placeholder="autor">
                 </div>
-                <div class="campo_editorial">
+                <div class="campo">
                     <input type="text" name="editorial" value="<?php echo $fila['editorial']?>" placeholder="editorial">
                 </div>
-                <div class="campo_genero">
+                <div class="campo">
                     <input type="text" name="genero" value="<?php echo $fila['genero']?>" placeholder="genero">
                 </div>
-                <div class="campo_publicacion">
+                <div class="campo">
                     <input type="text" name="publicacion" value="<?php echo $fila['publicacion']?>" placeholder="fecha de publicacion">
                 </div>
-                <div class="campo_formato">
+                <div class="campo">
                     <input type="text" name="formato" value="<?php echo $fila['formato']?>" placeholder="breve formato">
                 </div>
-                <div class="campo_link">
+                <div class="campo">
                     <input type="text" name="descarga" value="<?php echo $fila['descarga']?>" placeholder="link">
                 </div>
                 <input type="submit" name="btn_e" value="editar">
@@ -138,10 +132,6 @@
             </thead>
             <tbody>
             <?php 
-                include_once("con_db.php");
-
-                $obj = new Database();
-                $con = $obj->conectar();
 
                 if(isset($_POST['b']) || "1" == "1"){
                     
@@ -164,7 +154,7 @@
                                 <!--El link introducido se guarda en la base de datos y directamente se carga en el href-->
                                 <td>
                                     <!--BOTON DE EDITAR-->
-                                    <form action="busqueda_todo.php" method="POST">
+                                    <form action="lista_comunitaria.php" method="POST">
                                         <input style="display: none;" name="id" value="<?php echo $fila['id']?>">
                                         <button id="btn_editar" class="btn_editar_borrar" type="submit" name="btn_editar">Editar</button>
                                     </form>
@@ -177,7 +167,7 @@
                         }
                     }
                     else{
-                        echo "No hay nada con ese nombre";
+                        echo "No hay nada con ese nombre. Presiona la lupa sin introducir nada para volver a mostrar la lista completa.";
                     }
                     }   
             ?>
