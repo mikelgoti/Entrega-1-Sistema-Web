@@ -34,7 +34,7 @@
                 <li class="menu_a"><a href="#" class="menu_link">MARVEL</a></li>
                 <li class="menu_a"><a href="#" class="menu_link">MANGAS</a></li>
                 <li class="menu_a"><a href="#" class="menu_link"></i>LIBROS</a></li>
-                <li class="menu_a"><a href="busqueda_todo.php" target="_blank" class="menu_link"></i><i class="fa-regular fa-rectangle-list"></i>  LISTA COMUNITARIA</a></li>
+                <li class="menu_a"><a href="lista_comunitaria.php" target="_blank" class="menu_link"></i><i class="fa-regular fa-rectangle-list"></i>  LISTA COMUNITARIA</a></li>
                 <div id="segundomenu">
                     <li class="menu_a contenedor-perfil">
                         <a href="#" class="menu_link perfil-btn"><i class="fa-solid fa-circle-user"></i>  <?php echo $usuario-> getUsuario()?>  <i class="fa-solid fa-arrow-turn-down"></i></a>

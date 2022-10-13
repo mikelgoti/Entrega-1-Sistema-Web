@@ -1,5 +1,6 @@
 body{
     margin: 0;
+    background-color: lightgrey;
 }
 
 header{
@@ -11,22 +12,24 @@ header{
 }
 
 .agregar_comic{
+    margin-top: 30px;
     display: flex;
 }
 
 .campo{
-    border: 1px solid black;
-    font-family: 'Bangers', cursive;
+    /*border: 1px solid black;*/
     width: 200px;
     height: 40px;
-    line-height: 30px;
-    text-align: center;
-    flex-wrap: wrap;
-    justify-content: center;
+}
+
+#add_agregar{
+    margin-left: 180px;
 }
 
 .campo input{
-    width: 100%;
+    text-align: center;
+    outline: none;
+    width: 96%;
     height: 100%;
 }
 
@@ -45,12 +48,26 @@ header{
 .tabla{
     width: 100%;
     /*margin-left: 16%;*/
-    margin-top: 20px;
+    margin-top: 60px;
     
 }
 
+th{
+    background-color: #0075FF;
+    border-right: none;
+}
+
 th,td{
-    border: solid 1.5px black;
+    border: solid 2px grey;
+    border-collapse: collapse;
+    font-size: 20px;
+    border-right: none;
+    border-left: none;
+    border-top: none;
+}
+
+td{
+    text-align: center;
 }
 
 .contenedor_agregar{

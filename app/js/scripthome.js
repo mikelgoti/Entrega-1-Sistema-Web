@@ -28,6 +28,7 @@ function actualizar(div,input){
  * EXPRESIONES REGULARES CONSTANTES PARA VALIDAR LOS CAMPOS SEGUN EL PDF DEL TRABAJO
  * EXPRESION REGULAR = ER
  */
+
 const expresiones = {
     usuario: /^[a-zA-Z0-9]{4,16}$/,/**ER= minusculas mayusculas digitos rango(4-16)*/
     email: /^[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{2,5}$/,/**ER=*/
@@ -40,9 +41,6 @@ const expresiones = {
     password: /^[a-zA-Z0-9]{5,20}$/
 }
 
-/**
- * VARIABLES MENU
- */
 
 const pni = document.querySelectorAll('#perfil_nuevo_input');
 let btn_perfil = document.getElementById('perfil_cambio_btn');
@@ -55,7 +53,6 @@ pni.forEach( i =>
 
 function campo(e)
 {
-    console.log(e.target.name)
     switch(e.target.name){
         case "usuario":
             validar(expresiones.usuario,e.target,'usuario');
@@ -97,8 +94,6 @@ function campo(e)
 
 const validar = (exp, input, c) => {
 
-    const param = document.getElementById(`campo__input-error-${c}`);
-
     if(exp.test(input.value)){
         document.getElementById(`grupo__${c}`).classList.remove('grupo_registrar-mal');
         document.getElementById(`grupo__${c}`).classList.add('grupo_registrar-bien');
@@ -133,5 +128,4 @@ function validarLetraDni(dni){
         document.getElementById('grupo__dni').classList.remove('grupo_registrar-bien');
         document.getElementById('grupo__dni').classList.add('grupo_registrar-mal');
     }
-
 }
