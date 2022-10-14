@@ -1,3 +1,7 @@
+*{
+    font-family: sans-serif;
+}
+
 body{
     margin: 0;
     background-color: lightgrey;
@@ -22,15 +26,35 @@ header{
     height: 40px;
 }
 
+#AGREGAR{
+    margin-left: 200px;
+}
+
+#EDITAR{
+    margin-left: 200px;
+}
+
 #add_agregar{
     margin-left: 180px;
+    top: 100px;
 }
 
 .campo input{
     text-align: center;
-    outline: none;
+    outline: 1px solid;
     width: 96%;
     height: 100%;
+}
+
+.btns{
+    width: 80px;
+    height: 46px;
+    border-style: 0.3px solid;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    cursor: pointer;
+    font-family: sans-serif;
+    font-weight: bold;
 }
 
 .searchbar{
@@ -48,17 +72,25 @@ header{
 .tabla{
     width: 100%;
     /*margin-left: 16%;*/
-    margin-top: 60px;
-    
+    margin-top: 120px;
+    font-weight: bold;
+    font-family: sans-serif;
+    border-collapse: collapse;
+}
+
+thead{
+    height: 20px;
+    width: 100%;
 }
 
 th{
+    height: 40px;
     background-color: #0075FF;
     border-right: none;
 }
 
 th,td{
-    border: solid 2px grey;
+    border-bottom: 2px solid rgba(0,0,0,.15);
     border-collapse: collapse;
     font-size: 20px;
     border-right: none;
@@ -78,19 +110,35 @@ td{
 
 .icono_link_descarga{
     padding: 17px;
+    
+}
+
+.icono_link_descarga a{
+    text-decoration: none;
+    color: black;
+}
+
+.icono_link_descarga i{
+    color: rgb(33, 216, 128);
+}
+
+.icono_link_descarga a:hover i{
+    text-shadow: 0px 0px 5px  #119200;
 }
 
 .btn_editar_borrar{
+    font-family: sans-serif;
+    font-weight: bold;
     width: 100%;
     height: 40px;
-    border-style: solid;
+    border-style: none;
     border-radius: 10px;
     cursor: pointer;
     margin: 2px;
 }
 
 #btn_editar{
-    background-color: rgb(0, 255, 0);
+    background-color: rgb(0, 255, 132);
 }
 
 #btn_borrar{

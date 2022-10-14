@@ -19,7 +19,8 @@
 </head>
 <body>
     <header>
-        <h1>SI TIENES CUENTA INICIA SESION</h1>
+        <h1>COMIC CENTRAL<br></h1>
+		<h2>INICIA SESION</h2>
     </header>
 
     <form class="registro_total" action="ControladorInicioSesion.php" method="POST">
@@ -42,9 +43,10 @@
             <p class="mensaje">Introduce tu contraeña.</p>
         </div>
         <div class="campos_inicio" id="btn">
-            <button type="submit" class="campo_btn">Iniciar Sesion</button>
+            <button type="submit" class="campo_btn">INICIAR SESION</button>
+            <a href="../index.php" type="submit" class="campo_btn">VOLVER</a>
         </div>
-        <a href="../index.php">VOLVER</a>
+        
     </div>    
     </form>
 </body>

@@ -43,10 +43,11 @@
             
             <form id="filtro" class="searchbar" action="lista_comunitaria.php" method="POST">
             <h2>Filtro de busqueda.</h2>
-            <input type="text" id="search" name="b" placeholder="busca por nombre, autor, editorial, genero " ><button type="submit" class="btn_lupa_todo"><i class="fa-solid fa-magnifying-glass"></i></button>
+            <input type="text" id="search" name="b" placeholder="buscar por nombre, autor, editorial y genero " ><button type="submit" class="btn_lupa_todo"><i class="fa-solid fa-magnifying-glass"></i></button>
             </form>
         </div>
     </header>
+    <h3 id="AGREGAR">AGREGAR</h3>
     <form class="contenedor_agregar" action="borrar.php" method="POST">
         <div class="agregar_comic" id="add_agregar">
             
@@ -71,7 +72,7 @@
             <div class="campo">
                 <input type="text" name="descarga" placeholder="link">
             </div>
-            <input type="submit" name="btn_agregar" value="agregar">
+            <input class="btns" type="submit" name="btn_agregar" value="AGREGAR">
         </div>
     </form>
 
@@ -84,8 +85,9 @@
             
             while($fila = mysqli_fetch_array($res)){
         ?>
+        <h3 id="EDITAR">EDITAR</h3>
         <form class="contenedor_editar" action="borrar.php" method="POST">
-            <div class="agregar_comic" >
+            <div class="agregar_comic" id="editar_comic">
                 <div class="campo">
                     <input type="hidden" name="id"  value="<?php echo $fila['id']?>">
                 </div>
@@ -110,7 +112,7 @@
                 <div class="campo">
                     <input type="text" name="descarga" value="<?php echo $fila['descarga']?>" placeholder="link">
                 </div>
-                <input type="submit" name="btn_e" value="editar">
+                <input class="btns" type="submit" name="btn_e" value="EDITAR">
             </div>
         </form>
         <?php
