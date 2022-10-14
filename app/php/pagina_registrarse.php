@@ -9,14 +9,20 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" 
     integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" 
     crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<!--FUENTE PARA EL TITULO DE GOOGLE FONTS-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
     
     <title>Comic Central</title>
     <link rel="icon" href="../img/comic.png" type="image/x-icon">
 </head>
 <body>
     <header>
-    <h1>Comic Central<br>Registrate</h1>
-    </header>
+		<h1>COMIC CENTRAL<br></h1>
+		<h2>Registrate</h2>
+		
+	</header>
 	<main>
 		<form action="../php/controlador_registro.php" method="post" class="registro" id="campo">
 			
@@ -131,14 +137,16 @@
             </div>
 
 			<div class="campo__grupo campo__grupo-btn-enviar" id="btn_registrar">
-				<button disabled type="submit" class="campo__btn" id="btn_regis">Registrar</button>
+				<button disabled type="submit" class="campo__btn" id="btn_regis">REGISTRARSE</button>
 			</div>
-			<a href="../index.php" id="link_volver">volver</a>
+			<a href="../index.php" id="link_volver">VOLVER</a>
 			<div id="alerta_usuario_repetido"><?php if(isset($mensaje_error)){ echo $mensaje_error;}?></div>
 			<dvi id="alerta_usuario_correcto"><?php if(isset($mensaje_correcto)){echo $mensaje_correcto;}?></dvi>
 		</form>
-		
 	</main>
+	<footer class="footer">
+
+	</footer>
     <script src="../js/scriptvalidacion.js"></script>
 </body>
 </html>

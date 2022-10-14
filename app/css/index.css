@@ -7,62 +7,71 @@
 body{
     margin: 0;
     padding: none;
+    overflow-y: hidden;
 }
 
 header{
-    justify-content: center;
-    align-items: center;
     display: flex;
-    height: 80px;
+    justify-content: center;
+    height: 230px;
     padding: 10px;
-    background-color: lightgreen;
+    background-image: linear-gradient(to bottom,grey,lightgrey);
+    border: solid;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-color: #0075FF;
+}
+
+header h1{
+    position: relative;
+    margin-top: 140px;
+    font-family: 'Bangers', cursive;
+    font-size: 100px;
+    color: #0075FF;
+    cursor: pointer;
+}
+
+
+
+.contenedor{
+    display: flex;
 }
 /*MEJORAR LAS CLASES E IDS PARA QUE EL CODIGO DE CSS QUEDE MAS CLARO*/
 .center{
-    display: flex;   
+    height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(to bottom,lightgrey,grey);
+    display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    min-height: 75vh;
 }
 
 .links{
-    position: relative;
-    height: 250px;
-    width: 500px;
-    background-color: lightgrey;
-    border-radius: 10px;
-    border-style: solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 400px;
 }
 
-#link_iniciar_sesion{
+.links a{
+    border: 2px solid grey;
     text-decoration: none;
-    position: relative;
-    top: 30%;
-    right: 5%;
-    padding: 15px;
-    border: 3px solid black;
-    border-radius: 10px;
-    background-color: lightgreen;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    width: 240px;
+    height: 85px;
+    padding-left: 90px;
+    margin-left: 10px;
+    border-radius: 20px;
+    font-size: 23px;
+    background: radial-gradient(#0075FF,#01d5ff);
 }
 
-#link_registrarse{
-    text-decoration: none;
-    position: relative;
-    top: 30%;
-    left: 5%;
-    padding: 15px;
-    border: 3px solid black;
-    border-radius: 10px;
-    background-color: lightgreen;
+.links a:hover{
+    box-shadow: 0px 0px 10px #0075FF;
 }
 
-#link_ayuda{
-    text-decoration: none;
-    position: relative;
-    top: 50%;
-    padding: 15px;
-    border: 3px solid black;
-    border-radius: 10px;
-    background-color: lightgreen;
-}
