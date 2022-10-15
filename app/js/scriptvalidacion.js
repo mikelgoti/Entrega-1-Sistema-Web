@@ -5,11 +5,11 @@
  * EXPRESION REGULAR = ER
  */
 const expresiones = {
-    usuario: /^[a-zA-Z0-9]{4,16}$/,/**ER= minusculas mayusculas digitos rango(4-16)*/
+    usuario: /^[a-zA-Z0-9]{1,40}$/,/**ER= minusculas mayusculas digitos*/
     email: /^[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{2,5}$/,/**ER=*/
-    nombre: /^[a-zA-Z]{4,16}$/,/**ER= minusculas mayusculas rango(4-16)*/
-    apellido: /^[a-zA-Z]{4,16}$/,/**ER= minusculas mayusculas rango(4-16)*/
-    apellido1: /^[a-zA-Z]{4,16}$/,/**ER= minusculas mayusculas rango(4-16)*/
+    nombre: /^[a-zA-Z]{1,40}$/,/**ER= minusculas mayusculas*/
+    apellido: /^[a-zA-Z]{1,16}$/,/**ER= minusculas mayusculas*/
+    apellido1: /^[a-zA-Z]{1,16}$/,/**ER= minusculas mayusculas*/
     telefono: /^[0-9]{9}$/,/**ER= digitos rengo(9) */
     fecha: /^[0-9]{4}-[0-9]{2}-[0-9]{2}$/,
     dni: /^[0-9]{8}-[a-zA-Z]{1}$/,
@@ -75,14 +75,6 @@ function campo(e)
         break;
 
         case "password":
-            /*if(expresiones.password.test(e.target.value)){
-                document.getElementById('grupo__password').classList.remove('grupo_registrar-mal');
-                document.getElementById('grupo__password').classList.add('grupo_registrar-bien');
-            }
-            else{
-                document.getElementById('grupo__password').classList.remove('grupo_registrar-bien');
-                document.getElementById('grupo__password').classList.add('grupo_registrar-mal');
-            }*/
             validar(expresiones.password,e.target,'password');
         break;
 
@@ -110,7 +102,6 @@ const validar = (exp, input, c) => {
     const param = document.getElementById(`campo__input-error-${c}`);
 
     if(exp.test(input.value)){
-        console.log("bien");
         param.style.display = "none";
         document.getElementById(`grupo__${c}`).classList.remove('grupo_registrar-mal');
         document.getElementById(`grupo__${c}`).classList.add('grupo_registrar-bien');
@@ -128,6 +119,7 @@ const validar = (exp, input, c) => {
             
             switch(c){
                 case "usuario":
+                    console.log("usuario bien")
                     botonDesbloquear(c,"true")
                 break;
 
@@ -170,13 +162,13 @@ const validar = (exp, input, c) => {
             }
         }
         else{
-            console.log("mal");
             param.style.display = "block";
             document.getElementById(`grupo__${c}`).classList.remove('grupo_registrar-bien');
             document.getElementById(`grupo__${c}`).classList.add('grupo_registrar-mal');
             
             switch(c){
                 case "usuario":
+                    console.log("usuario mal")
                     botonDesbloquear(c,"false")
                 break;
 
@@ -236,7 +228,9 @@ const validar = (exp, input, c) => {
         
         switch(campo){
             case "usuario":
+                console.log(valor)
                 usuario = valor;
+                console.log(usuario)
                 break;
 
                 case "nombre":
@@ -278,12 +272,15 @@ const validar = (exp, input, c) => {
 
         if(usuario === "true" && email === "true" && nombre === "true" && apellido === "true" && apellido1 === "true" 
             && telefono === "true" && fecha === "true" && dni === "true" && password === "true" && password1 ==="true"){
+                console.log("desblo")
             boton.disabled = false;
             /*agregar clase para que el boton brille*/
             document.getElementById('btn_registrar').classList.add("boton_desbloqueado");
         }
         else{
+            console.log("bloqueo")
             boton.disabled = true;
+            document.getElementById('btn_registrar').classList.remove("boton_desbloqueado");
         }
     }
 /**

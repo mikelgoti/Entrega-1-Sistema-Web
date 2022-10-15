@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--CSS_LINK-->
     <link rel="stylesheet" href="../css/pagina_principal.css">
+    <link rel="stylesheet" href="../css/pagina_principal.css">
     <!--FONTAWESOME_LINK-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" 
     integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" 
@@ -187,7 +188,7 @@
                                 <li class="menu__a">Contraseña<a href="#" onclick="actualizar('div_password','input_password')"><i class="fa-solid fa-rotate"></i></a>
                                 <div class="php_info" id="div_password" style="display: block;">
                                     <br>    
-                                    <?php echo $usuario-> getPassword()?>
+                                    <?php echo "*********"?>
                                     </div>
                                     <form action="actualizarTabla.php" method="POST">
                                         <div class="input_cambio" id="input_password" style="display: none;">
@@ -441,7 +442,12 @@
             </div>
         </div>
         <div class="cd_body">
-
+            <div class="contenedor_img_s">
+                <div class="img_s"></div>
+                <div class="img_s"></div>
+                <div class="img_s"></div>
+            </div>
+            
         </div>
     </section>
 

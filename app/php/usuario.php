@@ -59,16 +59,6 @@
             return $this->password;
         }
 
-        public function swap($col,$u){
-
-            $obj = new Database();
-            $con = $obj -> conectar();
-
-            $query = mysqli_query($con,"UPDATE iniciados SET $col = REPLACE($col,'$this-> usuario','$u')");
-        }
-
-        //SETTERS
-
         //FUNCION PARA VER SI LOS DATOS AL INICIAR SESION CORRESPONDEN CON LA BASE DE
         public function validarLogin($user,$password){
             //CONVERTIR LA PASS INTRODUCIDA A UN HASH PARA COMPARARLA CON EL HASH PREVIAMENTE GENERADO EN LA DB
@@ -76,7 +66,8 @@
             $obj = new Database();
             $con = $obj->conectar();
 
-            $query = mysqli_query($con,"SELECT * FROM iniciados WHERE usuario='$user' AND password='$password';");
+            $query = mysqli_query($con,"SELECT * FROM iniciados WHERE usuario='$user' AND password='$password';");//para prevenir las injecciones sql se podrian utilizar
+            //scapes string o enviar los datos separados de la consulta con un prepare statement
             if(mysqli_num_rows($query) == 1){
                 return true;
             }

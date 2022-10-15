@@ -2,7 +2,7 @@
 
 include_once("usuario.php");
 include_once("ControlSesion.php");
-include_once("actualizarTabla.php");
+/*include_once("actualizarTabla.php");*/
 
 $usuarioSesion = new ControlSesion();
 $usuario = new Usuario();

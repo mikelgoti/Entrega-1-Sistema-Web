@@ -22,7 +22,7 @@ class Database{
             return $conexion;
         }
         else{
-            echo "CONEXION FALLIDA CON LA BASE DE DATOS<br><br>";
+            echo "CONEXION FALLIDA CON LA BASE DE DATOS.";
         }
     }
 }
