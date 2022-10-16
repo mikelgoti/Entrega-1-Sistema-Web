@@ -36,7 +36,7 @@ Para acceder a phpmyadmin *USUARIO: admin PASSWORD: test*
 
 6. Una de las imagenes que hemos descargado con docker-compose será mysql en concreto *mariadb* esto creara un archivo mysql en la carpeta del proyecto. El cual iniciara una base de datos database dentro de phpmyadmin. Dentro de phpmyadmin hay que clicar en la base de datos database que estará vacia. Para importar clica en *importar* arriba donde estan todas las opciones. Buscar en el proyecto el archivo database.sql e importarlo. 
 
-7. El archivo contiene dos tablas *iniciados* e *todo*. Una vez importadas y en funcionamiento se puede acceder a la pagina web introduciendo la siguiente direccion en el navegador.
+7. El archivo contiene dos tablas *iniciados* y *todo*. Una vez importadas y en funcionamiento se puede acceder a la pagina web introduciendo la siguiente direccion en el navegador.
 
 ```
 localhost:81
