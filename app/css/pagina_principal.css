@@ -349,10 +349,10 @@ body{
 }
 
 .contenedor_must_reads{
+    padding-left: 20px;
     height: 900px;
     width: 1200px;
-    border: solid;
-    
+    border-right: solid;
     background-image: linear-gradient(to left,lightgrey,grey);
 }
 
@@ -370,9 +370,10 @@ body{
 }
 /*LISTA ABR*/
 .ligths{
+    padding-left: 20px;
     height: 900px;
     width: 100%;
-    border: solid;
+    border-left: solid;
     background-image: linear-gradient(to right,lightgrey,grey);
 }
 
@@ -466,29 +467,6 @@ body{
     }
 }
 
-/*SECTION DC*/
-.contenedor_dc{
-    margin: 0;
-}
 
-.contenedor_dc .dc_header{
-    height: 240px;
-    border-style: solid;
-    background-image: linear-gradient(to right,#09C6F9,#045DE9);
-}
 
-#dc_inicio{
-    top: 30px;
-    right: 135px;
-    text-decoration: none;
-    font-size: large;
-    font-style: bold;
-    color: black;
-    cursor: pointer;
-}
-
-.contenedor_dc .cd_body{
-    height: 800px;
-    border-style: solid;
-}
 

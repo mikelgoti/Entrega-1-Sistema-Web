@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--CSS_LINK-->
     <link rel="stylesheet" href="../css/pagina_principal.css">
-    <link rel="stylesheet" href="../css/pagina_principal.css">
+    <link rel="stylesheet" href="../css/pagina_principal1.css">
     <!--FONTAWESOME_LINK-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" 
     integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" 
@@ -30,11 +30,10 @@
         <span class="menuSpan" id="btnMenu"><i class="fa-solid fa-bars"></i></i> MENU</span>
         <nav class="menu_nav">
             <ul class="menu" id="menu">
-                <li class="menu_a"><a href="#" class="menu_link">CONTACTO</a></li>
+                <li class="menu_a"><a href="#footerr" class="menu_link">CONTACTO</a></li>
                 <li class="menu_a"><a href="#dc" class="menu_link">DC</a></li>
-                <li class="menu_a"><a href="#" class="menu_link">MARVEL</a></li>
-                <li class="menu_a"><a href="#" class="menu_link">MANGAS</a></li>
-                <li class="menu_a"><a href="#" class="menu_link"></i>LIBROS</a></li>
+                <li class="menu_a"><a href="#marvel" class="menu_link">MARVEL</a></li>
+                <li class="menu_a"><a href="#libros" class="menu_link"></i>LIBROS</a></li>
                 <li class="menu_a"><a href="lista_comunitaria.php" target="_blank" class="menu_link"></i><i class="fa-regular fa-rectangle-list"></i>  LISTA COMUNITARIA <i class="fa-solid fa-arrow-up-right-from-square"></i></a></li>
                 <div id="segundomenu">
                     <li class="menu_a contenedor-perfil">
@@ -354,23 +353,24 @@
                 <img class="imagen" src="../img/invencible.jpg" width="180px" alt="invencible_img">
                 <div class="texto">
                     <h3>IVENCIBLE</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                        Reiciendis dolor odit debitis nesciunt quidem maxime tempore aliquam, 
-                        nisi veniam modi pariatur obcaecati eos! Magni dolor voluptatum porro atque placeat earum!</p>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint sapiente 
-                        vel necessitatibus repellendus optio, obcaecati delectus hic, unde molestiae 
-                        exercitationem natus perferendis velit! Ducimus consequuntur repellendus labore voluptate facere cum.</p>
+                    <p>Invencible es un comic de estilo americano creado por el famoso Robert Kirkman y Cory Walker. Kirkman es conocido por la creacion del comic de The Walking Dead. 
+                        A medida que fueron saliendo numeros de invencible fue cogiendo fama exponencialmente, sobretodo frente al público joven.  </p>
+                    <p>Los comics cuentan la historia de una adolescente Mark Grayson, el cual es un adolescente mas de la tierra. 
+                        Lo que le diferencia del resto de los mortales es que su padre es el superheroe mas fuerte y famoso de todo el planeta.
+                        Mark tiene los mismo poderes que su padre pero aun no han despertado. 
+                    </p>
                 </div><!--fin_texto-->
             </div><!--fin_must_reads-->
             <div class="must_reads">
                 <div class="texto">
                     <h3>HELLBOY</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                        Reiciendis dolor odit debitis nesciunt quidem maxime tempore aliquam, 
-                        nisi veniam modi pariatur obcaecati eos! Magni dolor voluptatum porro atque placeat earum!</p>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint sapiente 
-                        vel necessitatibus repellendus optio, obcaecati delectus hic, unde molestiae 
-                        exercitationem natus perferendis velit! Ducimus consequuntur repellendus labore voluptate facere cum.</p>
+                    <p>Hellboy, el cómic con el que Mike Mignola alcanzó fama mundial, 
+                        nació a la historieta en los noventa, en la editorial canadiense Dark Horse. 
+                        
+                        Este volumen reúne los dos primeros álbumes del personaje, Semilla de destrucción y Despierta al demonio.</p>
+                    <p>En ellos se cuenta el origen de tan peculiar tipo: Hellboy es un demonio invocado en 1944 en Tarmagant, 
+                        una pequeña isla escocesa, por los responsables del proyecto Ragna Rok, uno de los muchos proyectos 
+                        ocultistas que Hitler lanzó para cambiar el rumbo de la guerra. </p>
                 </div><!--fin_texto-->
                 <img class="imagen" src="../img/hellboy.jpg" width="180px" alt="hellboy_img">
             </div><!--fin_must_reads-->
@@ -378,12 +378,11 @@
                 <img class="imagen" src="../img/vinland.jpg" width="180px" alt="vinland_img">
                 <div class="texto">
                     <h3>VINLAND SAGA</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                        Reiciendis dolor odit debitis nesciunt quidem maxime tempore aliquam, 
-                        nisi veniam modi pariatur obcaecati eos! Magni dolor voluptatum porro atque placeat earum!</p>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint sapiente 
-                        vel necessitatibus repellendus optio, obcaecati delectus hic, unde molestiae 
-                        exercitationem natus perferendis velit! Ducimus consequuntur repellendus labore voluptate facere cum.</p>
+                    <p>Es una serie de manga escrita e ilustrada por Makoto Yukimura. Actualmente
+                    es en la editorial Afternoon, donde continúa su publicación hasta el presente.</p>
+                    <p>Thors, un gran guerrero vikingo, es asesinado en batalla por Askeladd, un mercenario. 
+                        Thorfinn, hijo de Thors, juró vengarse. Thorfinn debe realizar hazañas para Askeladd, 
+                        a fin de ganar el derecho de retarlo a un duelo, lo que lo lleva a involucrarse en la guerra por la corona de Inglaterra.</p>
                 </div><!--fin_texto-->
             </div><!--fin_must_reads-->
         </div>
@@ -407,7 +406,7 @@
                             $obj = new Database();
                             $con = $obj-> conectar();
                             
-                            $f = $con-> query("SELECT * FROM todo ORDER BY id DESC LIMIT 6");
+                            $f = $con-> query("SELECT * FROM todo ORDER BY id DESC LIMIT 18");
                             $cont = 1;
                             while($fil = mysqli_fetch_array($f)){
                                 
@@ -441,20 +440,94 @@
             <a href="#inicio" id="dc_inicio"> INICIO</a>
             </div>
         </div>
-        <div class="cd_body">
-            <div class="contenedor_img_s">
-                <div class="img_s"></div>
-                <div class="img_s"></div>
-                <div class="img_s"></div>
+        <div class="dc_body">
+            <div class="titulos_dc"><h1>HEROES DEL MUNDO DC</h1></div>
+            <div class="contenedor_img_s_dc">
+                <div class="img_s_dc"><img src="../img/dc/bat.png" width="330" height="280"><h3>BATMAN</h3><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores rem laudantium dignissimos totam saepe. Vitae, porro sapiente corrupti iste fuga illum facere aliquam unde culpa</p></div>
+                <div class="img_s_dc"><img src="../img/dc/sup.png" width="330" height="280"><h3>SUPERMAN</h3><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores rem laudantium dignissimos totam saepe. Vitae, porro sapiente corrupti iste fuga illum facere aliquam unde culpa</p></div>
+                <div class="img_s_dc"><img src="../img/dc/ww.png" width="330" height="280"><h3>WONDER WOMAN</h3><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores rem laudantium dignissimos totam saepe. Vitae, porro sapiente corrupti iste fuga illum facere aliquam unde culpa</p></div>
+                <div class="img_s_dc"><img src="../img/dc/a.png" width="330" height="280"><h3>AQUAMAN</h3><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores rem laudantium dignissimos totam saepe. Vitae, porro sapiente corrupti iste fuga illum facere aliquam unde culpa</p></div>
             </div>
             
+            <div class="contenedor_nuevos">
+                <div class="titulos_dc"><h1>NOVEDADES RECIENTES</h1></div>
+                <div class="contenedor_nuevos_imgs_dc">
+                    <div class="imgs_nuevos_dc"><img src="../img/dc/l1.jpg" width="200" height="280" ><h4>TITULO</h4><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus, ut quam, saepe tempore quibusdam cumque accusamus</p></div>
+                    <div class="imgs_nuevos_dc"><img src="../img/dc/l2.jpg" width="200" height="280" ><h4>TITULO</h4><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus, ut quam, saepe tempore quibusdam cumque accusamus</p></div>
+                    <div class="imgs_nuevos_dc"><img src="../img/dc/l3.jpg" width="200" height="280" ><h4>TITULO</h4><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus, ut quam, saepe tempore quibusdam cumque accusamus</p></div>
+                    <div class="imgs_nuevos_dc"><img src="../img/dc/l4.jpg" width="200" height="280" ><h4>TITULO</h4><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus, ut quam, saepe tempore quibusdam cumque accusamus</p></div>
+                    <div class="imgs_nuevos_dc"><img src="../img/dc/l5.png" width="200" height="280" ><h4>TITULO</h4><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus, ut quam, saepe tempore quibusdam cumque accusamus</p></div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <footer>
-        
-    </footer>
+    <!--SECTION MARVEL-->
+    <section class="contenedor_marvel">
+        <div class="marvel_header" id="marvel">
+            <div class="cd_header_logo">
+            <a id="title_marvel"><img src="../img/marvel/Marvel_Logo.svg.png" width="430px" alt="marvel_logo"></a>
+            <a href="#inicio" id="marvel_inicio"> INICIO</a>
+            </div>
+        </div>
+        <div class="marvel_body">
+            <div class="titulos_marvel"><h1>HEROES DEL MUNDO MARVEL</h1></div>
+            <div class="contenedor_img_s_marvel">
+                <div class="img_s_marvel"><img src="../img/marvel/ironman.jpg" width="330" height="280"><h3>IRON MAN</h3><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores rem laudantium dignissimos totam saepe. Vitae, porro sapiente corrupti iste fuga illum facere aliquam unde culpa</p></div>
+                <div class="img_s_marvel"><img src="../img/marvel/thor.png" width="330" height="280"><h3>THOR</h3><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores rem laudantium dignissimos totam saepe. Vitae, porro sapiente corrupti iste fuga illum facere aliquam unde culpa</p></div>
+                <div class="img_s_marvel"><img src="../img/marvel/capitan.png" width="330" height="280"><h3>CAPITAN AMERICA</h3><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores rem laudantium dignissimos totam saepe. Vitae, porro sapiente corrupti iste fuga illum facere aliquam unde culpa</p></div>
+                <div class="img_s_marvel"><img src="../img/marvel/spiderman.png" width="330" height="280"><h3>SPIDERMAN</h3><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores rem laudantium dignissimos totam saepe. Vitae, porro sapiente corrupti iste fuga illum facere aliquam unde culpa</p></div>
+            </div>
+            
+            <div class="contenedor_nuevos">
+                <div class="titulos_marvel"><h1>NOVEDADES RECIENTES</h1></div>
+                <div class="contenedor_nuevos_imgs_marvel">
+                    <div class="imgs_nuevos_marvel"><img src="../img/marvel/l1.jpg" width="200" height="280" ><h4>TITULO</h4><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus, ut quam, saepe tempore quibusdam cumque accusamus</p></div>
+                    <div class="imgs_nuevos_marvel"><img src="../img/marvel/l2.jpg" width="200" height="280" ><h4>TITULO</h4><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus, ut quam, saepe tempore quibusdam cumque accusamus</p></div>
+                    <div class="imgs_nuevos_marvel"><img src="../img/marvel/l3.jpg" width="200" height="280" ><h4>TITULO</h4><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus, ut quam, saepe tempore quibusdam cumque accusamus</p></div>
+                    <div class="imgs_nuevos_marvel"><img src="../img/marvel/l4.jpg" width="200" height="280" ><h4>TITULO</h4><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus, ut quam, saepe tempore quibusdam cumque accusamus</p></div>
+                    <div class="imgs_nuevos_marvel"><img src="../img/marvel/l5.jpg" width="200" height="280" ><h4>TITULO</h4><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus, ut quam, saepe tempore quibusdam cumque accusamus</p></div>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <section class="contenedor_libros">
+        <div class="libros_header" id="libros">
+            <div class="titulo_libros">
+            <h1>LIBROS</h1>
+            <a href="#inicio"> INICIO</a>
+            </div>
+
+            <div class="contenedor_nuevos_imgs_libros">
+                <div class="imgs_nuevos_libros"><img src="../img/libros/l1.jpg" width="200" height="280" ><h4>TITULO</h4><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus, ut quam, saepe tempore quibusdam cumque accusamus</p></div>
+                <div class="imgs_nuevos_libros"><img src="../img/libros/l2.jpg" width="200" height="280" ><h4>TITULO</h4><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus, ut quam, saepe tempore quibusdam cumque accusamus</p></div>
+                <div class="imgs_nuevos_libros"><img src="../img/libros/l3.jpg" width="200" height="280" ><h4>TITULO</h4><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus, ut quam, saepe tempore quibusdam cumque accusamus</p></div>
+                <div class="imgs_nuevos_libros"><img src="../img/libros/l4.jpg" width="200" height="280" ><h4>TITULO</h4><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus, ut quam, saepe tempore quibusdam cumque accusamus</p></div>
+                <div class="imgs_nuevos_libros"><img src="../img/libros/l5.jpg" width="200" height="280" ><h4>TITULO</h4><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus, ut quam, saepe tempore quibusdam cumque accusamus</p></div>
+            </div>
+
+            <div class="contenedor_nuevos_imgs_libros1">
+                <div class="imgs_nuevos_libros1"><img src="../img/libros/l1.jpg" width="200" height="280" ><h4>TITULO</h4><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus, ut quam, saepe tempore quibusdam cumque accusamus</p></div>
+                <div class="imgs_nuevos_libros1"><img src="../img/libros/l2.jpg" width="200" height="280" ><h4>TITULO</h4><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus, ut quam, saepe tempore quibusdam cumque accusamus</p></div>
+                <div class="imgs_nuevos_libros1"><img src="../img/libros/l3.jpg" width="200" height="280" ><h4>TITULO</h4><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus, ut quam, saepe tempore quibusdam cumque accusamus</p></div>
+                <div class="imgs_nuevos_libros1"><img src="../img/libros/l4.jpg" width="200" height="280" ><h4>TITULO</h4><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus, ut quam, saepe tempore quibusdam cumque accusamus</p></div>
+                <div class="imgs_nuevos_libros1"><img src="../img/libros/l5.jpg" width="200" height="280" ><h4>TITULO</h4><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus, ut quam, saepe tempore quibusdam cumque accusamus</p></div>
+            </div>
+        </div>
+    </section>
+    
+    <section>
+        <footer>
+            <div id="footerr">
+                <a href="#inicio">INICIO</a>
+            </div>
+            <div>
+            <h3>comiCCentral@gmail.com</h3>
+            </div>
+        </footer>
+    </section>
+    
     <!--Scripts-->
     <script src="../js/menu.js"></script>
     <script src="../js/scripthome.js"></script>

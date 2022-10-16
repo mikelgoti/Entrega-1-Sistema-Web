@@ -80,7 +80,16 @@ INSERT INTO `todo` (`id`, `nombre`, `autor`, `editorial`, `genero`, `publicacion
 (11, '2. Dune', 'Frank Herbert', 'Acervo', 'novela, ciencia ficcion, politica', '\r\n1969', 'EPUB', 'https://mega.nz/file/3N50wATb#z53LjwliPsAXIKvia_zHFmTCO7EzS0cSXVhmQsElgxA'),
 (12, '3. Dune', 'Frank Herbert', 'Acervo', 'novela, ciencia ficcion, politica', '\r\n1976', 'EPUB', 'https://mega.nz/file/uRRkEYbK#lD-0-EeQhteD7Asg4Rd-k7OAXsvkFu3Go_6RxSYMz0c'),
 (13, '(Shingeki)Ataque a los titanes 137', 'Hajime Isayama', 'Kōdansha', 'manga,violencia', '\r\n9 de septiembre de 2009', 'PDF', 'https://mega.nz/file/PIRAjCQa#JJXNuMx8WKvdamg1vQmaeJFmNf7GeE9Eby7DLLJpFfY'),
-(14, '(Shingeki)Ataque a los titanes 138 FINAL', 'Hajime Isayama', 'Kōdansha', 'manga,violencia', '\r\n9 de abril de 2021', 'PDF', 'https://mega.nz/file/WJICUTaR#Tf3wuXk5NCNWGWP7tfrZTTIxMWzHdn-SSoeRg2hfa2I');
+(14, '(Shingeki)Ataque a los titanes 138 FINAL', 'Hajime Isayama', 'Kōdansha', 'manga,violencia', '\r\n9 de abril de 2021', 'PDF', 'https://mega.nz/file/WJICUTaR#Tf3wuXk5NCNWGWP7tfrZTTIxMWzHdn-SSoeRg2hfa2I'),
+(15, 'The witcher-1', 'Andrzej Sapkowski', 'Norma', 'fantasia,violencia,edad media', '1990', 'PDF', 'https://mega.nz/file/WJICUTaR#Tf3wuXk5NCNWGWP7tfrZTTIxMWzHdn-SSoeRg2hfa2I'),
+(16, 'The witcher-2', 'Andrzej Sapkowski', 'Norma', 'fantasia,violencia,edad media', '1992', 'PDF', 'https://mega.nz/file/WJICUTaR#Tf3wuXk5NCNWGWP7tfrZTTIxMWzHdn-SSoeRg2hfa2I'),
+(17, 'The witcher-3', 'Andrzej Sapkowski', 'Norma', 'fantasia,violencia,edad media', '1995', 'PDF', 'https://mega.nz/file/WJICUTaR#Tf3wuXk5NCNWGWP7tfrZTTIxMWzHdn-SSoeRg2hfa2I'),
+(18, 'Superman The man of steel-1', 'John Byrne', 'DC', 'superheroes', '1986', 'CBR', 'https://mega.nz/file/WJICUTaR#Tf3wuXk5NCNWGWP7tfrZTTIxMWzHdn-SSoeRg2hfa2I'),
+(19, 'Superman The man of steel-2', 'John Byrne', 'DC', 'superheroes', '1987', 'CBR', 'https://mega.nz/file/WJICUTaR#Tf3wuXk5NCNWGWP7tfrZTTIxMWzHdn-SSoeRg2hfa2I'),
+(20, 'Superman The man of steel-3', 'John Byrne', 'DC', 'superheroes', '1987', 'CBR', 'https://mega.nz/file/WJICUTaR#Tf3wuXk5NCNWGWP7tfrZTTIxMWzHdn-SSoeRg2hfa2I'),
+(21, 'Superman Annual', 'Alan Moore', 'DC', 'superheroes', '1985', 'CBR', 'https://mega.nz/file/WJICUTaR#Tf3wuXk5NCNWGWP7tfrZTTIxMWzHdn-SSoeRg2hfa2I'),
+(22, 'All star Superman', 'Grant Morrison', 'DC', 'superheroes', '2006', 'CBR', 'https://mega.nz/file/WJICUTaR#Tf3wuXk5NCNWGWP7tfrZTTIxMWzHdn-SSoeRg2hfa2I'),
+(23, 'Green Arrow: Año uno', 'Andy Diggle', 'DC', 'superheroes', '2021', 'CBR', 'https://mega.nz/file/WJICUTaR#Tf3wuXk5NCNWGWP7tfrZTTIxMWzHdn-SSoeRg2hfa2I');
 
 --
 -- Índices para tablas volcadas
