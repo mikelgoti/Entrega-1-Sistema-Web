@@ -5,9 +5,7 @@ MIKEL GOTI GARAYALDE
 
 El archivo docker-compose.yml se encarga de descargar las imagenes necesarias para crear la estructura que permite lanzar una pagina web en cualquier medio. 
 La ventaja principal de utilizar docker-compose es que es rapido y portable. Si en vez de querer lanzar mi web quisieramos abrir cualquier otra seria tan facil como sustituir a la carpeta **app/**, la cual es la que contiene la web.  
-```
-- ./directorionuevo:/var/www/html/
-```
+
 ### Instrucciones para ejecutar el docker-compose.yml y abrir la pagina web. 
 1. Copiar la url del repositorio donde se encunetra el proyecto:
 ```
