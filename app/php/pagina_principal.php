@@ -443,20 +443,20 @@
         <div class="dc_body">
             <div class="titulos_dc"><h1>HEROES DEL MUNDO DC</h1></div>
             <div class="contenedor_img_s_dc">
-                <div class="img_s_dc"><img src="../img/dc/bat.png" width="330" height="280"><h3>BATMAN</h3><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores rem laudantium dignissimos totam saepe. Vitae, porro sapiente corrupti iste fuga illum facere aliquam unde culpa</p></div>
-                <div class="img_s_dc"><img src="../img/dc/sup.png" width="330" height="280"><h3>SUPERMAN</h3><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores rem laudantium dignissimos totam saepe. Vitae, porro sapiente corrupti iste fuga illum facere aliquam unde culpa</p></div>
-                <div class="img_s_dc"><img src="../img/dc/ww.png" width="330" height="280"><h3>WONDER WOMAN</h3><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores rem laudantium dignissimos totam saepe. Vitae, porro sapiente corrupti iste fuga illum facere aliquam unde culpa</p></div>
-                <div class="img_s_dc"><img src="../img/dc/a.png" width="330" height="280"><h3>AQUAMAN</h3><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores rem laudantium dignissimos totam saepe. Vitae, porro sapiente corrupti iste fuga illum facere aliquam unde culpa</p></div>
+                <div class="img_s_dc"><img src="../img/dc/bat.png" width="330" height="280"><h3>BATMAN</h3><p></p></div>
+                <div class="img_s_dc"><img src="../img/dc/sup.png" width="330" height="280"><h3>SUPERMAN</h3><p></p></div>
+                <div class="img_s_dc"><img src="../img/dc/ww.png" width="330" height="280"><h3>WONDER WOMAN</h3><p></p></div>
+                <div class="img_s_dc"><img src="../img/dc/a.png" width="330" height="280"><h3>AQUAMAN</h3><p></p></div>
             </div>
             
             <div class="contenedor_nuevos">
                 <div class="titulos_dc"><h1>NOVEDADES RECIENTES</h1></div>
                 <div class="contenedor_nuevos_imgs_dc">
-                    <div class="imgs_nuevos_dc"><img src="../img/dc/l1.jpg" width="200" height="280" ><h4>TITULO</h4><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus, ut quam, saepe tempore quibusdam cumque accusamus</p></div>
-                    <div class="imgs_nuevos_dc"><img src="../img/dc/l2.jpg" width="200" height="280" ><h4>TITULO</h4><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus, ut quam, saepe tempore quibusdam cumque accusamus</p></div>
-                    <div class="imgs_nuevos_dc"><img src="../img/dc/l3.jpg" width="200" height="280" ><h4>TITULO</h4><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus, ut quam, saepe tempore quibusdam cumque accusamus</p></div>
-                    <div class="imgs_nuevos_dc"><img src="../img/dc/l4.jpg" width="200" height="280" ><h4>TITULO</h4><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus, ut quam, saepe tempore quibusdam cumque accusamus</p></div>
-                    <div class="imgs_nuevos_dc"><img src="../img/dc/l5.png" width="200" height="280" ><h4>TITULO</h4><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus, ut quam, saepe tempore quibusdam cumque accusamus</p></div>
+                    <div class="imgs_nuevos_dc"><img src="../img/dc/l1.jpg" width="200" height="280" ><h4>Flashpoint Beyond-1</h4><p>Despues del gran acontecimiento de dc comics flashpoint tenemos flashpoint beyond parte del canon.</p></div>
+                    <div class="imgs_nuevos_dc"><img src="../img/dc/l2.jpg" width="200" height="280" ><h4>Flashpoint Beyond</h4><p>Despues del gran acontecimiento de dc comics flashpoint tenemos flashpoint beyond parte del canon.</p></div>
+                    <div class="imgs_nuevos_dc"><img src="../img/dc/l3.jpg" width="200" height="280" ><h4>Dark Crisis</h4><p>La liga de la jsuticia se embarca en una aventura contra el lord oscuro.</p></div>
+                    <div class="imgs_nuevos_dc"><img src="../img/dc/l4.jpg" width="200" height="280" ><h4>Super Sons</h4><p>¿Son relamente tan poderosos como los padres?</p></div>
+                    <div class="imgs_nuevos_dc"><img src="../img/dc/l5.png" width="200" height="280" ><h4>Batman The knight</h4><p>Antes de convertirse en el protector de gotham batman deberá adquirir todas las habilidades que pueda.</p></div>
                 </div>
             </div>
         </div>
@@ -473,20 +473,20 @@
         <div class="marvel_body">
             <div class="titulos_marvel"><h1>HEROES DEL MUNDO MARVEL</h1></div>
             <div class="contenedor_img_s_marvel">
-                <div class="img_s_marvel"><img src="../img/marvel/ironman.jpg" width="330" height="280"><h3>IRON MAN</h3><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores rem laudantium dignissimos totam saepe. Vitae, porro sapiente corrupti iste fuga illum facere aliquam unde culpa</p></div>
-                <div class="img_s_marvel"><img src="../img/marvel/thor.png" width="330" height="280"><h3>THOR</h3><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores rem laudantium dignissimos totam saepe. Vitae, porro sapiente corrupti iste fuga illum facere aliquam unde culpa</p></div>
-                <div class="img_s_marvel"><img src="../img/marvel/capitan.png" width="330" height="280"><h3>CAPITAN AMERICA</h3><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores rem laudantium dignissimos totam saepe. Vitae, porro sapiente corrupti iste fuga illum facere aliquam unde culpa</p></div>
-                <div class="img_s_marvel"><img src="../img/marvel/spiderman.png" width="330" height="280"><h3>SPIDERMAN</h3><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores rem laudantium dignissimos totam saepe. Vitae, porro sapiente corrupti iste fuga illum facere aliquam unde culpa</p></div>
+                <div class="img_s_marvel"><img src="../img/marvel/ironman.jpg" width="330" height="280"><h3>IRON MAN</h3><p></p></div>
+                <div class="img_s_marvel"><img src="../img/marvel/thor.png" width="330" height="280"><h3>THOR</h3><p></p></div>
+                <div class="img_s_marvel"><img src="../img/marvel/capitan.png" width="330" height="280"><h3>CAPITAN AMERICA</h3><p></p></div>
+                <div class="img_s_marvel"><img src="../img/marvel/spiderman.png" width="330" height="280"><h3>SPIDERMAN</h3><p></p></div>
             </div>
             
             <div class="contenedor_nuevos">
                 <div class="titulos_marvel"><h1>NOVEDADES RECIENTES</h1></div>
                 <div class="contenedor_nuevos_imgs_marvel">
-                    <div class="imgs_nuevos_marvel"><img src="../img/marvel/l1.jpg" width="200" height="280" ><h4>TITULO</h4><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus, ut quam, saepe tempore quibusdam cumque accusamus</p></div>
-                    <div class="imgs_nuevos_marvel"><img src="../img/marvel/l2.jpg" width="200" height="280" ><h4>TITULO</h4><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus, ut quam, saepe tempore quibusdam cumque accusamus</p></div>
-                    <div class="imgs_nuevos_marvel"><img src="../img/marvel/l3.jpg" width="200" height="280" ><h4>TITULO</h4><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus, ut quam, saepe tempore quibusdam cumque accusamus</p></div>
-                    <div class="imgs_nuevos_marvel"><img src="../img/marvel/l4.jpg" width="200" height="280" ><h4>TITULO</h4><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus, ut quam, saepe tempore quibusdam cumque accusamus</p></div>
-                    <div class="imgs_nuevos_marvel"><img src="../img/marvel/l5.jpg" width="200" height="280" ><h4>TITULO</h4><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus, ut quam, saepe tempore quibusdam cumque accusamus</p></div>
+                    <div class="imgs_nuevos_marvel"><img src="../img/marvel/l1.jpg" width="200" height="280" ><h4>Marvel voices</h4><p></p></div>
+                    <div class="imgs_nuevos_marvel"><img src="../img/marvel/l2.jpg" width="200" height="280" ><h4>Valquiria</h4><p></p></div>
+                    <div class="imgs_nuevos_marvel"><img src="../img/marvel/l3.jpg" width="200" height="280" ><h4>She Hulk</h4><p></p></div>
+                    <div class="imgs_nuevos_marvel"><img src="../img/marvel/l4.jpg" width="200" height="280" ><h4>Avengers</h4><p></p></div>
+                    <div class="imgs_nuevos_marvel"><img src="../img/marvel/l5.jpg" width="200" height="280" ><h4>Eternals</h4><p></p></div>
                 </div>
             </div>
         </div>
@@ -500,19 +500,19 @@
             </div>
 
             <div class="contenedor_nuevos_imgs_libros">
-                <div class="imgs_nuevos_libros"><img src="../img/libros/l1.jpg" width="200" height="280" ><h4>TITULO</h4><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus, ut quam, saepe tempore quibusdam cumque accusamus</p></div>
-                <div class="imgs_nuevos_libros"><img src="../img/libros/l2.jpg" width="200" height="280" ><h4>TITULO</h4><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus, ut quam, saepe tempore quibusdam cumque accusamus</p></div>
-                <div class="imgs_nuevos_libros"><img src="../img/libros/l3.jpg" width="200" height="280" ><h4>TITULO</h4><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus, ut quam, saepe tempore quibusdam cumque accusamus</p></div>
-                <div class="imgs_nuevos_libros"><img src="../img/libros/l4.jpg" width="200" height="280" ><h4>TITULO</h4><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus, ut quam, saepe tempore quibusdam cumque accusamus</p></div>
-                <div class="imgs_nuevos_libros"><img src="../img/libros/l5.jpg" width="200" height="280" ><h4>TITULO</h4><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus, ut quam, saepe tempore quibusdam cumque accusamus</p></div>
+                <div class="imgs_nuevos_libros"><img src="../img/libros/anillos.jpg" width="200" height="280" ><h4>El señor de los anillos</h4><p>Primer libro de la legendaria saga de aventuras escrita por el visionario Tolkien.</p></div>
+                <div class="imgs_nuevos_libros"><img src="../img/libros/arte.jpg" width="200" height="280" ><h4>El arte de la guerra</h4><p>Es un tratado sobre práctica militar y estrategia de guerra que se fundamenta en principios de la doctrina taoísta.</p></div>
+                <div class="imgs_nuevos_libros"><img src="../img/libros/charlie.jpg" width="200" height="280" ><h4>Charlie y la fabrica de chocolate</h4><p>Esta historia muestra cómo a veces una decisión puede transformar radicalmente toda una vida... </p></div>
+                <div class="imgs_nuevos_libros"><img src="../img/libros/don.jpg" width="200" height="280" ><h4>Don Quijote</h4><p>El ingenioso hidalgo don Quijote de la Mancha narra las aventuras de Alonso Quijano, un hidalgo pobre que de tanto leer novelas de caballería acaba enloqueciendo y creyendo ser un caballero andante</p></div>
+                <div class="imgs_nuevos_libros"><img src="../img/libros/dune.jpg" width="200" height="280" ><h4>Dune</h4><p>Historia sobre la política de ciencia ficción. Considerada una de las mejores obras de ciencia ficción de todos los tiempos.</p></div>
             </div>
 
             <div class="contenedor_nuevos_imgs_libros1">
-                <div class="imgs_nuevos_libros1"><img src="../img/libros/l1.jpg" width="200" height="280" ><h4>TITULO</h4><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus, ut quam, saepe tempore quibusdam cumque accusamus</p></div>
-                <div class="imgs_nuevos_libros1"><img src="../img/libros/l2.jpg" width="200" height="280" ><h4>TITULO</h4><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus, ut quam, saepe tempore quibusdam cumque accusamus</p></div>
-                <div class="imgs_nuevos_libros1"><img src="../img/libros/l3.jpg" width="200" height="280" ><h4>TITULO</h4><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus, ut quam, saepe tempore quibusdam cumque accusamus</p></div>
-                <div class="imgs_nuevos_libros1"><img src="../img/libros/l4.jpg" width="200" height="280" ><h4>TITULO</h4><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus, ut quam, saepe tempore quibusdam cumque accusamus</p></div>
-                <div class="imgs_nuevos_libros1"><img src="../img/libros/l5.jpg" width="200" height="280" ><h4>TITULO</h4><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus, ut quam, saepe tempore quibusdam cumque accusamus</p></div>
+                <div class="imgs_nuevos_libros1"><img src="../img/libros/game.jpg" width="200" height="280" ><h4>Juego de tronos</h4><p></p></div>
+                <div class="imgs_nuevos_libros1"><img src="../img/libros/game1.jpg" width="200" height="280" ><h4>Juego de tronos</h4><p></p></div>
+                <div class="imgs_nuevos_libros1"><img src="../img/libros/moby.jpg" width="200" height="280" ><h4>Moby dick</h4><p></p></div>
+                <div class="imgs_nuevos_libros1"><img src="../img/libros/witcher.jpeg" width="200" height="280" ><h4>The witcher</h4><p></p></div>
+                <div class="imgs_nuevos_libros1"><img src="../img/libros/withcer 2.jpg" width="200" height="280" ><h4>The witcher</h4><p></p></div>
             </div>
         </div>
     </section>
