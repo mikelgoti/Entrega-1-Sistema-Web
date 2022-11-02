@@ -6,6 +6,21 @@ class ControlSesion{
     public function __construct()
     {
         session_start();
+
+        //$_SESSION['token'] = $token = md5(time()); 
+    }
+
+    /**
+    * TOKEN CSRF 
+    */
+    //setter
+    public function setTokenCSRF($token){
+        $_SESSION['token'] = $token;
+    }
+
+    //getter
+    public static function getToken(){
+        return $_SESSION['token'];
     }
 
     //METODO PARA ASIGNAR AL USUARIO ACTUAL
@@ -21,5 +36,6 @@ class ControlSesion{
         session_unset();
         session_destroy();
     }
+
 }
 ?>

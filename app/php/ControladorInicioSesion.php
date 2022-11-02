@@ -19,9 +19,12 @@ else if(isset($_POST['usuario']) && isset($_POST['password'])){
     
     $u = $_POST['usuario'];
     $p = $_POST['password'];
+    $t = $_POST['token'];
 
     if($usuario-> validarLogin($u,$p)){
         $usuarioSesion-> setUsuarioActual($u);//PARA ASIGNAR EL USUARIO A LA SESION ACTUAL HASTA QUE CERREMOS SESION
+        $usuarioSesion-> setTokenCSRF($t);
+        
         $usuario-> setInfo($u);//ESTE METODO SE UTILIZA PARA ACCEDER A LA DB Y ASIGNAR EN LA CLASE USUARIO() EL USUARIO Y EL NOMBRE SEGUN EL USUARIO QUE SE INTRODUZCA
         include_once("pagina_principal.php");
     }

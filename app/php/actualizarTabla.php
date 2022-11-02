@@ -1,5 +1,4 @@
 <?php
-
     include_once("con_db.php");
 
     $obj = new Database();
@@ -83,22 +82,32 @@
     function update($col,$pAntiguo,$pNuevo){
 
         include_once("con_db.php");
+        include_once("ControlSesion.php");
+        session_start();
 
-        $obj = new Database();
-        $con = $obj-> conectar();
+        if(isset($_SESSION['token']) && $_SESSION['token'] == ControlSesion::getToken()){
+            echo "TOKEN CORRECTO: ".ControlSesion::getToken();
+            echo "";
 
-        $res = $con->query("SELECT EXISTS (SELECT * FROM iniciados WHERE $col='$pAntiguo');");
-        $row = mysqli_fetch_row($res);
+            $obj = new Database();
+            $con = $obj-> conectar();
 
-        if($row[0] == 1){
-            $con-> query("UPDATE iniciados SET $col= '$pNuevo' WHERE $col= '$pAntiguo'");
-            echo "Se a actualizado la informacion satisfactoriamente. Vuelve a iniciar sesion para verificar los cambios.";
-            ?> <a href="pagina_iniciarsesion.php">Iniciar sesion de nuevo.</a><?php
+            $res = $con->query("SELECT EXISTS (SELECT * FROM iniciados WHERE $col='$pAntiguo');");
+            $row = mysqli_fetch_row($res);
+
+            if($row[0] == 1){
+                $con-> query("UPDATE iniciados SET $col= '$pNuevo' WHERE $col= '$pAntiguo'");
+                echo "Se a actualizado la informacion satisfactoriamente. Vuelve a iniciar sesion para verificar los cambios.";
+                ?> <a href="pagina_iniciarsesion.php">Iniciar sesion de nuevo.</a><?php
+            }
+            else{
+                echo "Para actualizar la informacion introduce correctamente tu antiguo ",$col,".";
+                ?> <a href="pagina_iniciarsesion.php">Vuelve a iniciar sesion e intentalo de nuevo.</a><?php
+            }
         }
         else{
-            echo "Para actualizar la informacion introduce correctamente tu antiguo ",$col,".";
-            ?> <a href="pagina_iniciarsesion.php">Vuelve a iniciar sesion e intentalo de nuevo.</a><?php
+            echo "Posible ataque Cross Site Request Forgery.";
+            
         }
-        
     }
 ?>

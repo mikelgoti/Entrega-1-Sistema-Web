@@ -18,7 +18,7 @@ db:
     MYSQL_PASSWORD: test
     MYSQL_DATABASE: database
   ports:
-    - "8889:3306"
+    - "8000:3306"
 
 phpmyadmin:
   image: phpmyadmin/phpmyadmin:latest

@@ -1,3 +1,4 @@
+<?php echo ControlSesion::getToken()?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
