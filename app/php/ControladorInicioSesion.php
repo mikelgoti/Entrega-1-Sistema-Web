@@ -16,9 +16,16 @@ if(isset($_SESSION['usuario'])){
     include_once("pagina_principal.php");
 }
 else if(isset($_POST['usuario']) && isset($_POST['password'])){
+
+    include_once("con_db.php");
+    $obj = new Database();
+    $con = $obj->conectar();
     
-    $u = $_POST['usuario'];
-    $p = $_POST['password'];
+    /**
+     * Usamos la funcion mysql_real_scape_string para poder evitar los caracteres y los simbolos
+     * */
+    $u = mysqli_real_escape_string($con,$_POST['usuario']);
+    $p = mysqli_real_escape_string($con,$_POST['password']);
     $t = $_POST['token'];
 
     if($usuario-> validarLogin($u,$p)){

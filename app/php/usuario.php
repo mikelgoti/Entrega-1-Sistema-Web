@@ -61,18 +61,43 @@
 
         //FUNCION PARA VER SI LOS DATOS AL INICIAR SESION CORRESPONDEN CON LA BASE DE
         public function validarLogin($user,$password){
+            
             //CONVERTIR LA PASS INTRODUCIDA A UN HASH PARA COMPARARLA CON EL HASH PREVIAMENTE GENERADO EN LA DB
             
             $obj = new Database();
             $con = $obj->conectar();
 
-            $query = mysqli_query($con,"SELECT * FROM iniciados WHERE usuario='$user' AND password='$password';");//para prevenir las injecciones sql se podrian utilizar
-            //scapes string o enviar los datos separados de la consulta con un prepare statement
+            /*$query = mysqli_query($con,"SELECT * FROM iniciados WHERE usuario='$user' 
+            AND password='$password';");
+
             if(mysqli_num_rows($query) == 1){
                 return true;
             }
             else{
                 return false;
+            }*/
+
+            /**
+             * PREPARE STATEMENT PARA EVITAR SQL INJECTION
+             */
+            $sql = "SELECT * FROM iniciados WHERE usuario=? AND password=?;";//QUERY
+            $stmt = mysqli_stmt_init($con);// iniciamos la PREPARE STATEMENT
+
+            if(!mysqli_stmt_prepare($stmt,$sql)){
+                echo "SQL prepare statement ha fallado.";
+                return false;
+            }
+            else{
+                mysqli_stmt_bind_param($stmt,"ss",$user,$password);//Bindeamos los parametros
+                mysqli_stmt_execute($stmt);//Ejecutamos la prepare estatement
+                $query = mysqli_stmt_get_result($stmt);//guardamos el resultado
+                
+                if(mysqli_num_rows($query) == 1){
+                    return true;
+                }
+                else{
+                    return false;
+                }
             }
         }
 
