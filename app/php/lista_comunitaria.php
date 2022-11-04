@@ -28,14 +28,17 @@
         $con = $obj->conectar();
         
         if(isset($_POST['b'])){
-            $input = $_POST['b'];
-            if($input == ""){
-
+                    
+            
+            if($_POST['b'] == ""){
+                echo ($_POST['b']);
+                echo "No has buscado nada.";
             }
             else{
-                echo "HAS BUSCADO ",$_POST['b'];}
+                echo "HAS BUSCADO ", ($_POST['b']);
             }
             
+        }
         ?>
         </h1>
         <div class="header2">
