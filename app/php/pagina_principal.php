@@ -1,4 +1,3 @@
-<?php echo ControlSesion::getToken()?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -35,7 +34,13 @@
                 <li class="menu_a"><a href="#dc" class="menu_link">DC</a></li>
                 <li class="menu_a"><a href="#marvel" class="menu_link">MARVEL</a></li>
                 <li class="menu_a"><a href="#libros" class="menu_link"></i>LIBROS</a></li>
-                <li class="menu_a"><a href="lista_comunitaria.php" target="_blank" class="menu_link"></i><i class="fa-regular fa-rectangle-list"></i>  LISTA COMUNITARIA <i class="fa-solid fa-arrow-up-right-from-square"></i></a></li>
+                
+                <form action="lista_comunitaria.php" target="_blank" method="POST" id="myForm">
+                <input name="t" value="<?php echo $t ?>" type="hidden">
+                    <li class="menu_a"><a href="#" onclick="document.getElementById('myForm').submit();" class="menu_link"></i><i class="fa-regular fa-rectangle-list"></i>  LISTA COMUNITARIA <i class="fa-solid fa-arrow-up-right-from-square"></i></a></li>
+                    <!--<button type="submit" class="campo_btn">Lista Comunitaria</button>-->
+                </form>
+                
                 <div id="segundomenu">
                     <li class="menu_a contenedor-perfil">
                         <a href="#" class="menu_link perfil-btn"><i class="fa-solid fa-circle-user"></i>  <?php echo $usuario-> getUsuario()?>  <i class="fa-solid fa-arrow-turn-down"></i></a>

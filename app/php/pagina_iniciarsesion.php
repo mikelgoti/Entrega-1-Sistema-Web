@@ -1,7 +1,10 @@
 <?php
+    /**
+     * GENERAMOS UN TOKEN MD5 para evitar el CSRF
+     * El token se pasa mediante post a ControladorInicioSesion.php
+     */
     $token = md5(time());
 ?>
-
 
 <!DOCTYPE html>
 <html lang="es">

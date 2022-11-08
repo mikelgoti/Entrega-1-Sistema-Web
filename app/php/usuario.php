@@ -67,16 +67,6 @@
             $obj = new Database();
             $con = $obj->conectar();
 
-            /*$query = mysqli_query($con,"SELECT * FROM iniciados WHERE usuario='$user' 
-            AND password='$password';");
-
-            if(mysqli_num_rows($query) == 1){
-                return true;
-            }
-            else{
-                return false;
-            }*/
-
             /**
              * PREPARE STATEMENT PARA EVITAR SQL INJECTION
              */

@@ -1,3 +1,41 @@
+<?  
+    include_once("con_db.php");
+
+    $obj = new Database();
+    $con = $obj->conectar();
+
+    $t = null;
+
+    if(isset($_POST['t'])){
+        $t = $_POST['t'];
+    }
+?>
+
+<?
+    if(isset($_POST['b']) && isset($_POST['t'])){
+        include_once("Token.php");
+        $objToken = new Token($_POST['t']);
+
+        if($objToken->validar()){
+            if($_POST['b'] == ""){
+                ?>
+                <h1><?
+                    echo htmlspecialchars($_POST['b']);
+                    echo "No has buscado nada.";
+                ?></h1>
+                <?
+            }
+            else{
+                ?><h1><?
+                echo "HAS BUSCADO ", htmlspecialchars($_POST['b']);
+                ?></h1><?
+            }
+        }
+        else{
+            echo "El token no coincide con el de la sesion. Posible amenzada CSRF.";
+        }
+    }
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -21,35 +59,20 @@
 <body>
 
     <header>
-        <h1><?php
-        include_once("con_db.php");
-
-        $obj = new Database();
-        $con = $obj->conectar();
-        
-        if(isset($_POST['b'])){
-                    
-            
-            if($_POST['b'] == ""){
-                echo ($_POST['b']);
-                echo "No has buscado nada.";
-            }
-            else{
-                echo "HAS BUSCADO ", ($_POST['b']);
-            }
-            
-        }
-        ?>
+        <h1>
         </h1>
         <div class="header2">
             <h1>LISTA COMUNITARIA</h1>
-            
+            <!--BUSQUEDA-->
             <form id="filtro" class="searchbar" action="lista_comunitaria.php" method="POST">
             <h2>Filtro de busqueda.</h2>
             <input type="text" id="search" name="b" placeholder="buscar por nombre, autor, editorial y genero " ><button type="submit" class="btn_lupa_todo"><i class="fa-solid fa-magnifying-glass"></i></button>
-            </form>
+            <input type="hidden" name="t" value="<?php echo $t?>">    
+        </form>
         </div>
     </header>
+    
+    <!--AGREGAR-->
     <h3 id="AGREGAR">AGREGAR</h3>
     <form class="contenedor_agregar" action="borrar.php" method="POST">
         <div class="agregar_comic" id="add_agregar">
@@ -78,18 +101,32 @@
             <input class="btns" type="submit" name="btn_agregar" value="AGREGAR">
         </div>
     </form>
-
+    <!--EDITAR-->
 <?php
-    if(isset($_POST['btn_editar'])){
-        $id = $_POST['id'];
-        $res = $con-> query("SELECT * FROM todo WHERE id='$id'");
-        /*echo "Fila de edicion, cambiale el nombre, el autor, etc... y presiona editar para guardar los cambios y agregarlos a la lista.";*/
+    if(isset($_POST['btn_editar']) && isset($_POST['t'])){
+
+        /*$objToken = new Token($_POST['t']);*/
+        
+        $id = mysqli_real_escape_string($con,$_POST['id']);
+        /*$res = $con-> query("SELECT * FROM todo WHERE id='$id'");*/
+        $sqlEditar = "SELECT * FROM todo WHERE id=?";
+
+        $stmtEditar = mysqli_stmt_init($con);
+        if(!mysqli_stmt_prepare($stmtEditar,$sqlEditar)){//handleo de error
+            echo "Error SQL prepare statement.";
+        }
+        else{
+            mysqli_stmt_bind_param($stmtEditar,"s",$id);//bindeo de parametros
+            mysqli_stmt_execute($stmtEditar);//ejecutamos la consulta.
+            $res = mysqli_stmt_get_result($stmtEditar);//guardamos el resultado
+        }
         if(mysqli_num_rows($res) > 0){
             
             while($fila = mysqli_fetch_array($res)){
         ?>
         <h3 id="EDITAR">EDITAR</h3>
         <form class="contenedor_editar" action="borrar.php" method="POST">
+            <input type="hidden" name="t" value="<?php echo $t?>">  
             <div class="agregar_comic" id="editar_comic">
                 <div class="campo">
                     <input type="hidden" name="id"  value="<?php echo $fila['id']?>">
@@ -136,15 +173,29 @@
                 <th>LINK DESCARGA</th>
             </thead>
             <tbody>
+                <!--MOSTRAR TABLA-->
             <?php 
-
-                if(isset($_POST['b']) || "1" == "1"){
+                if(isset($_POST['b']) || true){
                     
-                    $busqueda = isset($_POST['b']) ? $_POST['b'] : null;
-                
+                    $busqueda = isset($_POST['b']) ? mysqli_real_escape_string($con,$_POST['b']) : null;
+                    
                     $consulta = $con->query("SELECT * FROM todo WHERE 
                     CONCAT(nombre,autor,editorial,genero) LIKE '%$busqueda%'");
+                    
+                    /*$sqlBusqueda = "SELECT * FROM todo WHERE 
+                    CONCAT(nombre,autor,editorial,genero) LIKE '?'";
+                    $stmtBusqueda = mysqli_stmt_init($con);
 
+                    if(!mysqli_stmt_prepare($stmtBusqueda,$sqlBusqueda)){
+                        echo "SQL prepare statement ha fallado.";
+                        return false;
+                    }
+                    else{
+                        mysqli_stmt_bind_param($stmtBusqueda,"s",$busqueda);
+                        mysqli_stmt_execute($stmtBusqueda);//Ejecutamos la prepare estatement
+                        $consulta = mysqli_stmt_get_result($stmtBusqueda);//guardamos el resultado
+                    }*/
+                    
                     if(mysqli_num_rows($consulta) > 0){
                         foreach($consulta as $fila){
                             ?>
@@ -160,6 +211,7 @@
                                 <td>
                                     <!--BOTON DE EDITAR-->
                                     <form action="lista_comunitaria.php" method="POST">
+                                        <input type="hidden" name="t" value="<?php echo $t?>">
                                         <input style="display: none;" name="id" value="<?php echo $fila['id']?>">
                                         <button id="btn_editar" class="btn_editar_borrar" type="submit" name="btn_editar">Editar</button>
                                     </form>

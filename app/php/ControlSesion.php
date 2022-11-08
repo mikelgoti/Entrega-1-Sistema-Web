@@ -1,17 +1,16 @@
-<?php 
-
+<?php
 class ControlSesion{
     
     //CONSTRUCTOR QUE EMPIEZA LA SESION AL CREARSE EL OBJ
-    public function __construct()
+    public function __construct($token)
     {
         session_start();
-
-        //$_SESSION['token'] = $token = md5(time()); 
+        $this-> token = $token;
+        ControlSesion::setTokenCSRF($token);
     }
 
     /**
-    * TOKEN CSRF 
+    * TOKEN CSRF asignacion a la sesion
     */
     //setter
     public function setTokenCSRF($token){
