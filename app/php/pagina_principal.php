@@ -36,7 +36,7 @@
                 <li class="menu_a"><a href="#libros" class="menu_link"></i>LIBROS</a></li>
                 
                 <form action="lista_comunitaria.php" target="_blank" method="POST" id="myForm">
-                <input name="t" value="<?php echo $t ?>" type="hidden">
+                <!--<input name="t" value="<?php echo $t ?>" type="hidden">-->
                     <li class="menu_a"><a href="#" onclick="document.getElementById('myForm').submit();" class="menu_link"></i><i class="fa-regular fa-rectangle-list"></i>  LISTA COMUNITARIA <i class="fa-solid fa-arrow-up-right-from-square"></i></a></li>
                     <!--<button type="submit" class="campo_btn">Lista Comunitaria</button>-->
                 </form>

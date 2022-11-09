@@ -1,9 +1,14 @@
 <?php
+    if(!isset($_SESSION)){
+        session_start();
+    }  
     /**
      * GENERAMOS UN TOKEN MD5 para evitar el CSRF
      * El token se pasa mediante post a ControladorInicioSesion.php
      */
     $token = md5(time());
+    $_SESSION['csrf_token'] = $token;
+
 ?>
 
 <!DOCTYPE html>
@@ -32,7 +37,7 @@
     </header>
 
     <form class="registro_total" action="ControladorInicioSesion.php" method="POST">
-    <input name="token" value="<?php echo $token ?>" type="hidden">
+    <input name="csrf_token" value="<?php echo $token?>" type="hidden">
     <div id="mensaje_incorrecto"><?php if(isset($mensaje_incorrecto)){echo $mensaje_incorrecto;}?></div>
 
     <div class="contenedor">

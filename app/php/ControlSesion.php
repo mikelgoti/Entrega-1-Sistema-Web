@@ -1,40 +1,26 @@
 <?php
 class ControlSesion{
-
-    private $i = 0;
     
     //CONSTRUCTOR QUE EMPIEZA LA SESION AL CREARSE EL OBJ
-    public function __construct($token)
+    /*public function __construct($token)
     {
         session_start();
         $this-> token = $token;
         ControlSesion::setTokenCSRF($token);
-    }
+    }*/
 
     /**
     * TOKEN CSRF asignacion a la sesion
     */
     //setter
-    public function setTokenCSRF($token){
+    /*public function setTokenCSRF($token){
         $_SESSION['token'] = $token;
-    }
-
-    public function sumarIntento(){
-        $this-> i += 1;
-    }
-
-    public function getIntentos(){
-        return $this-> i;
-    }
-
-    public function setIntentos($i){
-        $this-> i = $i;
-    }
+    }*/
 
     //getter
-    public static function getToken(){
+    /*public static function getToken(){
         return $_SESSION['token'];
-    }
+    }*/
 
     //METODO PARA ASIGNAR AL USUARIO ACTUAL
     public function setUsuarioActual($usuario){
