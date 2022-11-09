@@ -14,8 +14,8 @@
     $telefono = mysqli_real_escape_string($con,$_POST['telefono']);
     $fecha = mysqli_real_escape_string($con,$_POST['fecha']);
     $dni = mysqli_real_escape_string($con,$_POST['dni']);
-    $password = mysqli_real_escape_string($con,$_POST['password']);
-
+    $password = password_hash(mysqli_real_escape_string($con,$_POST['password']),PASSWORD_DEFAULT);
+    //echo $password;
 
 
 /*$res = $con->query("SELECT EXISTS (SELECT * FROM iniciados WHERE usuario='$usuario');");
@@ -68,7 +68,7 @@ else{
     }
     
     /*function encriptarPass($p){
-        Convertir $p en un hash.
+        return password_hash($p, PASSWORD_DEFAULT);
     }*/
 }
     

@@ -36,7 +36,7 @@ CREATE TABLE `iniciados` (
   `telefono` int(9) DEFAULT NULL,
   `fecha` varchar(10) DEFAULT NULL,
   `dni` varchar(10) DEFAULT NULL,
-  `password` varchar(40) DEFAULT NULL
+  `password` varchar(200) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -44,7 +44,7 @@ CREATE TABLE `iniciados` (
 --
 
 INSERT INTO `iniciados` (`usuario`, `nombre`, `email`, `apellido`, `apellido1`, `telefono`, `fecha`, `dni`, `password`) VALUES
-('admin', 'admin', 'adminadmin@gmail.com', 'adminadmin', 'adminadminadmin', 655860404, '1942-01-01', '12345678-Z', '12345');
+('admin', 'admin', 'adminadmin@gmail.com', 'adminadmin', 'adminadminadmin', 655860404, '1942-01-01', '12345678-Z', '$2y$10$kyUnT4TVT9MN0nDJFwHJ4.MfASWdzuw4sZcqUUlLUjOskQNQm0QKK');
 
 -- --------------------------------------------------------
 

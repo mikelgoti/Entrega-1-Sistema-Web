@@ -1,6 +1,4 @@
 <?php
-    session_start();
-    
     class Token{
         
         private $token;

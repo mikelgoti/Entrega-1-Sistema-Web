@@ -1,40 +1,48 @@
 <?  
+    /*session_start();*/
     include_once("con_db.php");
+    //include_once("Token.php");
 
     $obj = new Database();
     $con = $obj->conectar();
 
-    $t = null;
+    if(isset($_POST['b'])){
+        if($_POST['b'] == ""){
+            ?>
+            <h1><?
+                echo htmlspecialchars($_POST['b']);
+                echo "No has buscado nada.";
+            ?></h1>
+            <?
+        }
+        else{
+            ?><h1><?
+            echo "HAS BUSCADO ", htmlspecialchars($_POST['b']);
+            ?></h1><?
+        }
+    }
+
+    /*$t = null;
 
     if(isset($_POST['t'])){
         $t = $_POST['t'];
-    }
+    }*/
 ?>
 
 <?
-    if(isset($_POST['b']) && isset($_POST['t'])){
-        include_once("Token.php");
-        $objToken = new Token($_POST['t']);
+    /*if(isset($_POST['b']) && isset($_POST['t'])){
+        
+        //$objToken = new Token($_POST['t']);
+        echo "Token asignado a la sesion actual-> ".$_SESSION['token']."<br>";
+        echo "<br>Token original sin asignar a la sesion actual->".$t."<br>";
 
-        if($objToken->validar()){
-            if($_POST['b'] == ""){
-                ?>
-                <h1><?
-                    echo htmlspecialchars($_POST['b']);
-                    echo "No has buscado nada.";
-                ?></h1>
-                <?
-            }
-            else{
-                ?><h1><?
-                echo "HAS BUSCADO ", htmlspecialchars($_POST['b']);
-                ?></h1><?
-            }
+        if(isset($_SESSION['token']) && $_SESSION['token'] == $t){
+            
         }
         else{
             echo "El token no coincide con el de la sesion. Posible amenzada CSRF.";
         }
-    }
+    }*/
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -67,7 +75,7 @@
             <form id="filtro" class="searchbar" action="lista_comunitaria.php" method="POST">
             <h2>Filtro de busqueda.</h2>
             <input type="text" id="search" name="b" placeholder="buscar por nombre, autor, editorial y genero " ><button type="submit" class="btn_lupa_todo"><i class="fa-solid fa-magnifying-glass"></i></button>
-            <input type="hidden" name="t" value="<?php echo $t?>">    
+            <!--<input type="hidden" name="t" value="">-->    
         </form>
         </div>
     </header>
@@ -103,7 +111,7 @@
     </form>
     <!--EDITAR-->
 <?php
-    if(isset($_POST['btn_editar']) && isset($_POST['t'])){
+    if(isset($_POST['btn_editar'])){
 
         /*$objToken = new Token($_POST['t']);*/
         
@@ -126,7 +134,7 @@
         ?>
         <h3 id="EDITAR">EDITAR</h3>
         <form class="contenedor_editar" action="borrar.php" method="POST">
-            <input type="hidden" name="t" value="<?php echo $t?>">  
+            <!--<input type="hidden" name="t" value="">-->  
             <div class="agregar_comic" id="editar_comic">
                 <div class="campo">
                     <input type="hidden" name="id"  value="<?php echo $fila['id']?>">
@@ -174,7 +182,8 @@
             </thead>
             <tbody>
                 <!--MOSTRAR TABLA-->
-            <?php 
+            <?php
+
                 if(isset($_POST['b']) || true){
                     
                     $busqueda = isset($_POST['b']) ? mysqli_real_escape_string($con,$_POST['b']) : null;
@@ -211,7 +220,7 @@
                                 <td>
                                     <!--BOTON DE EDITAR-->
                                     <form action="lista_comunitaria.php" method="POST">
-                                        <input type="hidden" name="t" value="<?php echo $t?>">
+                                    <!--<input type="hidden" name="t" value="">-->
                                         <input style="display: none;" name="id" value="<?php echo $fila['id']?>">
                                         <button id="btn_editar" class="btn_editar_borrar" type="submit" name="btn_editar">Editar</button>
                                     </form>

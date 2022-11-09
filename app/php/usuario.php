@@ -67,27 +67,57 @@
             $obj = new Database();
             $con = $obj->conectar();
 
-            /**
-             * PREPARE STATEMENT PARA EVITAR SQL INJECTION
-             */
-            $sql = "SELECT * FROM iniciados WHERE usuario=? AND password=?;";//QUERY
-            $stmt = mysqli_stmt_init($con);// iniciamos la PREPARE STATEMENT
+            $sqlU = "SELECT usuario FROM `iniciados` WHERE usuario=?;";
+            $stmtU = mysqli_stmt_init($con);
 
-            if(!mysqli_stmt_prepare($stmt,$sql)){
+            /**
+             * PREPARE STATEMENT DEL USUARIO
+             */
+            if(!mysqli_stmt_prepare($stmtU,$sqlU)){
                 echo "SQL prepare statement ha fallado.";
-                return false;
+                return false; 
             }
             else{
-                mysqli_stmt_bind_param($stmt,"ss",$user,$password);//Bindeamos los parametros
-                mysqli_stmt_execute($stmt);//Ejecutamos la prepare estatement
-                $query = mysqli_stmt_get_result($stmt);//guardamos el resultado
-                
-                if(mysqli_num_rows($query) == 1){
-                    return true;
+                mysqli_stmt_bind_param($stmtU,"s",$user);//Bindeamos los parametros
+                mysqli_stmt_execute($stmtU);//Ejecutamos la prepare estatement
+                $qU = mysqli_stmt_get_result($stmtU);//guardamos el resultado
+            }
+
+            /**
+             * PREPARE STATEMENT DE LA pass
+             */
+            $sqlP = "SELECT password FROM `iniciados` WHERE usuario=?;";
+            $stmtP = mysqli_stmt_init($con);
+
+            mysqli_stmt_prepare($stmtP,$sqlP);
+            
+            mysqli_stmt_bind_param($stmtP,"s",$user);//Bindeamos los parametros
+            mysqli_stmt_execute($stmtP);//Ejecutamos la prepare estatement
+            $qP = mysqli_stmt_get_result($stmtP);//guardamos el resultado
+            
+            /**
+             * 1. Si el usuario introducido y la contraseña existen y solamente hay una en la base de datos se procede sino devuelve fasle.
+             * 2. Se guarda el usuario y la contraseña hasheada mediante los whiles en las variables $u y $pHASH.
+             * 3. Se checkea que la contraseña sea veridica mediante la funcion password_verify. Esto es posible porque a sido almacenada en la base de datos ussando un hash + sal.
+             * 4. Si el usuario de la base de datos coincide con el que se a introducido y la contraseña se verifica correctamente se devuelve true.
+             * 
+             */
+            //1
+            if(mysqli_num_rows($qU) == 1 && mysqli_num_rows($qP) == 1){
+            //2    
+                while($ite = mysqli_fetch_array($qU)){
+                    $u = $ite['usuario'];
                 }
-                else{
-                    return false;
+                while($ite = mysqli_fetch_array($qP)){
+                    $pHASH = $ite['password'];
                 }
+            //3
+                $v = password_verify($password,$pHASH);
+            //4
+                return $user == $u && $v ? true : false;
+            }
+            else{
+                return false;
             }
         }
 
