@@ -34,6 +34,7 @@
     <form class="registro_total" action="ControladorInicioSesion.php" method="POST">
     <input name="token" value="<?php echo $token ?>" type="hidden">
     <div id="mensaje_incorrecto"><?php if(isset($mensaje_incorrecto)){echo $mensaje_incorrecto;}?></div>
+
     <div class="contenedor">
         <!--email-->
         <div class="campo_inicio" id="campo_usuario">

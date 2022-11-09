@@ -1,5 +1,7 @@
 <?php
 class ControlSesion{
+
+    private $i = 0;
     
     //CONSTRUCTOR QUE EMPIEZA LA SESION AL CREARSE EL OBJ
     public function __construct($token)
@@ -15,6 +17,18 @@ class ControlSesion{
     //setter
     public function setTokenCSRF($token){
         $_SESSION['token'] = $token;
+    }
+
+    public function sumarIntento(){
+        $this-> i += 1;
+    }
+
+    public function getIntentos(){
+        return $this-> i;
+    }
+
+    public function setIntentos($i){
+        $this-> i = $i;
     }
 
     //getter
