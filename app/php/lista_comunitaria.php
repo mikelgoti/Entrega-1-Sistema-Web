@@ -74,8 +74,7 @@
             <!--BUSQUEDA-->
             <form id="filtro" class="searchbar" action="lista_comunitaria.php" method="POST">
             <h2>Filtro de busqueda.</h2>
-            <input type="text" id="search" name="b" placeholder="buscar por nombre, autor, editorial y genero " ><button type="submit" class="btn_lupa_todo"><i class="fa-solid fa-magnifying-glass"></i></button>
-            <!--<input type="hidden" name="t" value="">-->    
+            <input type="text" id="search" name="b" placeholder="buscar por nombre, autor, editorial y genero " ><button type="submit" class="btn_lupa_todo"><i class="fa-solid fa-magnifying-glass"></i></button>   
         </form>
         </div>
     </header>
@@ -133,8 +132,7 @@
             while($fila = mysqli_fetch_array($res)){
         ?>
         <h3 id="EDITAR">EDITAR</h3>
-        <form class="contenedor_editar" action="borrar.php" method="POST">
-            <!--<input type="hidden" name="t" value="">-->  
+        <form class="contenedor_editar" action="borrar.php" method="POST"> 
             <div class="agregar_comic" id="editar_comic">
                 <div class="campo">
                     <input type="hidden" name="id"  value="<?php echo $fila['id']?>">
@@ -220,7 +218,6 @@
                                 <td>
                                     <!--BOTON DE EDITAR-->
                                     <form action="lista_comunitaria.php" method="POST">
-                                    <!--<input type="hidden" name="t" value="">-->
                                         <input style="display: none;" name="id" value="<?php echo $fila['id']?>">
                                         <button id="btn_editar" class="btn_editar_borrar" type="submit" name="btn_editar">Editar</button>
                                     </form>
