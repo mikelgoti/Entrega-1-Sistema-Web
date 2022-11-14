@@ -1,4 +1,6 @@
 <?php
+    header('X-Frame-Options:SAMEORIGIN');
+
     if(!isset($_SESSION)){
         session_start();
     }  
@@ -8,12 +10,13 @@
      */
     $token = md5(time());
     $_SESSION['csrf_token'] = $token;
-
 ?>
 
 <!DOCTYPE html>
 <html lang="es">
 <head>
+
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--LINK_CSS-->

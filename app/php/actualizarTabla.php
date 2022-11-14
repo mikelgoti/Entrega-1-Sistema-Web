@@ -83,11 +83,7 @@
 
         include_once("con_db.php");
         include_once("ControlSesion.php");
-        session_start();
-
-        if(isset($_SESSION['token']) && $_SESSION['token'] == ControlSesion::getToken()){
-            echo "TOKEN CORRECTO: ".ControlSesion::getToken();
-            echo "";
+        //session_start();
 
             $obj = new Database();
             $con = $obj-> conectar();
@@ -105,9 +101,5 @@
                 ?> <a href="pagina_iniciarsesion.php">Vuelve a iniciar sesion e intentalo de nuevo.</a><?php
             }
         }
-        else{
-            echo "Posible ataque Cross Site Request Forgery.";
-            
-        }
-    }
+    
 ?>

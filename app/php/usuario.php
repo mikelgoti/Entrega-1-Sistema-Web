@@ -61,9 +61,7 @@
 
         //FUNCION PARA VER SI LOS DATOS AL INICIAR SESION CORRESPONDEN CON LA BASE DE
         public function validarLogin($user,$password){
-            
-            //CONVERTIR LA PASS INTRODUCIDA A UN HASH PARA COMPARARLA CON EL HASH PREVIAMENTE GENERADO EN LA DB
-            
+
             $obj = new Database();
             $con = $obj->conectar();
 
