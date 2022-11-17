@@ -1,5 +1,15 @@
 <?php 
     header('X-Frame-Options:SAMEORIGIN');
+    include_once("php/ControlSesion.php");
+    session_start();
+
+    $sid = session_id();
+    setcookie('PHPSESSID', $sid, ['samesite' => 'Strict', 'secure' => true, 'httponly' => true]);
+    
+    $us = new ControlSesion();
+    $us-> killSesion();
+
+    print_r($_SESSION);
 ?>
 <!DOCTYPE html>
 <html lang="es">

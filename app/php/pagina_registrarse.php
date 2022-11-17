@@ -3,7 +3,7 @@
 
     if(!isset($_SESSION)){
         session_start();
-    }  
+	}  
     /**
      * GENERAMOS UN TOKEN MD5 para evitar el CSRF
      * El token se pasa mediante post a ControladorInicioSesion.php

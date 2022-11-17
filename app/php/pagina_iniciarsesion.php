@@ -3,6 +3,7 @@
 
     if(!isset($_SESSION)){
         session_start();
+        //session_set_cookie_params(['secure' => true, 'httponly' => true]);
     }  
     /**
      * GENERAMOS UN TOKEN MD5 para evitar el CSRF
@@ -10,6 +11,7 @@
      */
     $token = md5(time());
     $_SESSION['csrf_token'] = $token;
+    print_r($_SESSION);
 ?>
 
 <!DOCTYPE html>
