@@ -1,5 +1,15 @@
 <?php
-    header('X-Frame-Options:SAMEORIGIN');
+    //header('X-Frame-Options:SAMEORIGIN');
+    if(isset($_SESSION['bloqueo'])){
+
+        $d = time() - $_SESSION['bloqueo'];
+        $_SESSION['tiempo'] = $d;
+        if($d > 30){
+            unset($_SESSION['intentos']);
+            unset($_SESSION['bloqueo']);
+            unset($mensaje_incorrecto);
+        }
+    }
 
     if(!isset($_SESSION)){
         session_start();
@@ -17,8 +27,6 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--LINK_CSS-->
@@ -63,7 +71,22 @@
             <p class="mensaje">Introduce tu contraeña.</p>
         </div>
         <div class="campos_inicio" id="btn">
+            <?php
+
+                if(!isset($_SESSION['intentos'])){
+                    //session_start();
+                    $_SESSION["intentos"] = 0;
+                }
+                
+                if($_SESSION['intentos'] > 5){
+                    echo "Has superado el limite de inicio de sesiones.<br>Espera 30 segundos para volver a intentar iniciar sesion.<br>";
+                    $_SESSION['bloqueo'] = time();
+                }
+                else{
+                    
+            ?>
             <button type="submit" class="campo_btn">INICIAR SESION</button>
+            <?php }?>
             <a href="../index.php" type="submit" class="campo_btn">VOLVER</a>
         </div>
         
