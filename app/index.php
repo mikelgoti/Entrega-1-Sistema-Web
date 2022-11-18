@@ -1,6 +1,7 @@
 <?php 
     header('X-Frame-Options:SAMEORIGIN');
     include_once("php/ControlSesion.php");
+
     session_start();
 
     $sid = session_id();

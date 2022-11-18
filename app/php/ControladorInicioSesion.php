@@ -4,6 +4,7 @@
     }*/
     session_start();
     header('X-Frame-Options:SAMEORIGIN');
+    header();
     include_once("usuario.php");
     include_once("ControlSesion.php");   
 
@@ -41,28 +42,13 @@
             //header("location:pagina_principal.php");
         }
         else{
-            /**
-             * AQUI SE PODRIA AGREGAR UN CONTADOR PARA PONER UN LIMITE A LA HORA DE ACCEDER A LA PAGINA
-             * PONGAMOS 10 veces SI SE SUPERAN LLAMAMOS AL FBI
-             */
-            /*if(!isset($_SESSION['intentos'])){
-                //session_start();
-                $_SESSION["intentos"] = 1;
-                $mensaje_incorrecto = "El usuario o la contraseña son incorrectos.";
-                include_once("pagina_iniciarsesion.php");
-            }
-            else{
-                
-            }*/
+
             $_SESSION["intentos"] += 1;
                 
             if(!validarToken($t)){
                 echo "Posible amenaza CSRF.";
             }
-            /*$cont = $_SESSION['intentos'];
-            if($cont == 0){
-
-            }*/
+            
             $mensaje_incorrecto = "El usuario o la contraseña son incorrectos. Te quedan ". 6 - $_SESSION['intentos']." intentos.";
             include_once("pagina_iniciarsesion.php");
         }

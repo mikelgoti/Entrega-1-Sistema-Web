@@ -3,7 +3,7 @@
     if(isset($_SESSION['bloqueo'])){
 
         $d = time() - $_SESSION['bloqueo'];
-        $_SESSION['tiempo'] = $d;
+
         if($d > 30){
             unset($_SESSION['intentos']);
             unset($_SESSION['bloqueo']);
