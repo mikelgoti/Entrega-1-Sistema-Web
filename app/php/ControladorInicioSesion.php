@@ -4,7 +4,6 @@
     }*/
     session_start();
     header('X-Frame-Options:SAMEORIGIN');
-    header();
     include_once("usuario.php");
     include_once("ControlSesion.php");   
 

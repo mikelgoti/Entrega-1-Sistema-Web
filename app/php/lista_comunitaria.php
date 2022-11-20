@@ -21,28 +21,6 @@
             ?></h1><?
         }
     }
-
-    /*$t = null;
-
-    if(isset($_POST['t'])){
-        $t = $_POST['t'];
-    }*/
-?>
-
-<?
-    /*if(isset($_POST['b']) && isset($_POST['t'])){
-        
-        //$objToken = new Token($_POST['t']);
-        echo "Token asignado a la sesion actual-> ".$_SESSION['token']."<br>";
-        echo "<br>Token original sin asignar a la sesion actual->".$t."<br>";
-
-        if(isset($_SESSION['token']) && $_SESSION['token'] == $t){
-            
-        }
-        else{
-            echo "El token no coincide con el de la sesion. Posible amenzada CSRF.";
-        }
-    }*/
 ?>
 <!DOCTYPE html>
 <html lang="es">

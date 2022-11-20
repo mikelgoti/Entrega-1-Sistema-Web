@@ -10,7 +10,6 @@
      */
     $token = md5(time());
     $_SESSION['csrf_token_registrar'] = $token;
-	print_r($_SESSION);
 ?>
 
 <!DOCTYPE html>

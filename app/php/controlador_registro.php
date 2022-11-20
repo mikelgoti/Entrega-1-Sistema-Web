@@ -18,14 +18,8 @@
         $fecha = mysqli_real_escape_string($con,$_POST['fecha']);
         $dni = mysqli_real_escape_string($con,$_POST['dni']);
         $password = password_hash(mysqli_real_escape_string($con,$_POST['password']),PASSWORD_DEFAULT);
-        //echo $password;
+    
 
-
-        /*$res = $con->query("SELECT EXISTS (SELECT * FROM iniciados WHERE usuario='$usuario');");
-        $row = mysqli_fetch_row($res);*/
-        /**
-         * Prepare statement select para checkear que el usuario no exista.
-         */
         $sqlcheck = "SELECT EXISTS (SELECT * FROM iniciados WHERE usuario=?);";
         $stmtcheck = mysqli_stmt_init($con);// iniciamos la PREPARE STATEMENT
 
@@ -40,11 +34,6 @@
 
             
             if($row[0] == 0){
-                
-                //$h = encriptarPass($password);
-                //almacenar el hash generado de la password en la db
-                /*$con->query("INSERT INTO iniciados(usuario,email,nombre,apellido,apellido1,telefono,fecha,dni,password)
-                VALUES('$usuario','$email','$nombre','$apellido','$apellido1','$telefono','$fecha','$dni','$password')");*/
 
                 /**
                  * SQL PREPARE STATEMENET PARA PODER INSERTAR LA INFORMACION EN LA DB
@@ -69,10 +58,6 @@
                 $mensaje_error = "El usuario ya existe pruebe con otro.";
                 include_once("pagina_registrarse.php");
             }
-            
-            /*function encriptarPass($p){
-                return password_hash($p, PASSWORD_DEFAULT);
-            }*/
         }
     }
     else{

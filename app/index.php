@@ -1,4 +1,7 @@
 <?php 
+
+    header("Content-Security-Policy: default-src 'self'");
+
     header('X-Frame-Options:SAMEORIGIN');
     include_once("php/ControlSesion.php");
 
@@ -10,7 +13,6 @@
     $us = new ControlSesion();
     $us-> killSesion();
 
-    print_r($_SESSION);
 ?>
 <!DOCTYPE html>
 <html lang="es">

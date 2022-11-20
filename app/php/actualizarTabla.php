@@ -15,7 +15,6 @@
             $row = mysqli_fetch_row($res);
 
             if($row[0] == 0){
-                //echo $uN,$uA,$col;
                 update($col,$uA,$uN);
             }
             else{

@@ -21,7 +21,6 @@
      */
     $token = md5(time());
     $_SESSION['csrf_token'] = $token;
-    print_r($_SESSION);
 ?>
 
 <!DOCTYPE html>
